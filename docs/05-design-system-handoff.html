@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Design System والتسليم للمطور على سلة وزد · تصميم المتاجر على سلة وزد</title>
+<meta name="description" content="Tokens، المكونات وحالاتها، إعدادات التاجر، ملف Figma، والتسليم">
+<meta name="author" content="أسامة عبد الناصر">
+<link rel="canonical" href="https://osa98.github.io/salla-zid-ecommerce-design/05-design-system-handoff.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Design System والتسليم للمطور على سلة وزد · تصميم المتاجر على سلة وزد">
+<meta property="og:description" content="Tokens، المكونات وحالاتها، إعدادات التاجر، ملف Figma، والتسليم">
+<meta property="og:url" content="https://osa98.github.io/salla-zid-ecommerce-design/05-design-system-handoff.html">
+<meta property="og:image" content="https://osa98.github.io/salla-zid-ecommerce-design/assets/og.png">
+<meta property="og:locale" content="ar_AR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#12201C">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div class="progress" aria-hidden="true"><span></span></div>
+<header class="topbar"><div class="wrap topbar-in">
+  <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"></span><span>تصميم المتاجر على سلة وزد</span></a>
+  <button class="menu-btn" aria-label="القائمة" aria-expanded="false"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+  <nav class="nav" aria-label="المقالات"><a href="01-homepage.html" class=""><b>01</b>الصفحة الرئيسية</a><a href="02-product-listing.html" class=""><b>02</b>قائمة المنتجات</a><a href="03-product-page.html" class=""><b>03</b>صفحة المنتج</a><a href="04-cart-checkout.html" class=""><b>04</b>السلة والطلب</a><a href="05-design-system-handoff.html" class="on"><b>05</b>Design System</a><a href="notes.html" class="">ملاحظات مهمة</a><a class="gh" href="https://github.com/OSA98/salla-zid-ecommerce-design" target="_blank" rel="noopener" aria-label="الريبو على GitHub"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-4 1.5-4-2-6-2.5M15 21v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.3 4.3 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12 12 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.3 4.3 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg><span>GitHub</span></a></nav>
+</div></header>
+
+<main class="wrap article-layout">
+  <aside class="toc" aria-label="محتوى المقال"><div class="toc-title">في هذا المقال</div><ol><li><a href="#الثيم-نظام-وليس-صفحات-مرسومة">الثيم نظام، وليس صفحات مرسومة</a></li><li><a href="#1-design-tokens-القرارات-الصغيرة-التي-تتكرر">1. Design Tokens: القرارات الصغيرة التي تتكرر</a></li><li><a href="#2-اختبر-تصميمك-بأكثر-من-لون-أساسي">2. اختبر تصميمك بأكثر من لون أساسي</a></li><li><a href="#3-المكونات-وحالاتها">3. المكونات وحالاتها</a></li><li><a href="#4-ما-الذي-سيغيره-التاجر-خريطة-الإعدادات">4. ما الذي سيغيّره التاجر؟ خريطة الإعدادات</a></li><li><a href="#5-العربي-والإنجليزي-الانعكاس-الصحيح">5. العربي والإنجليزي: الانعكاس الصحيح</a></li><li><a href="#6-ملف-figma-الذي-يحبه-المطور">6. ملف Figma الذي يحبه المطور</a></li><li><a href="#ماذا-تسلم">ماذا تسلّم؟</a></li><li><a href="#الخلاصة">الخلاصة</a></li><li><a href="#المصادر">المصادر</a></li></ol>
+    <div class="toc-extra"><a href="https://github.com/OSA98/salla-zid-ecommerce-design/tree/main/articles/05-design-system-handoff" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-4 1.5-4-2-6-2.5M15 21v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.3 4.3 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12 12 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.3 4.3 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg> المقال على GitHub</a><a href="https://github.com/OSA98/salla-zid-ecommerce-design/raw/main/notion/05-design-system-handoff.zip"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg> نسخة Notion</a></div></aside>
+  <article class="prose">
+    <nav class="crumbs"><a href="index.html">السلسلة</a><span>/</span><span>المقال 05 من 5</span></nav>
+    <header class="article-head"><span class="kicker">المقال 05</span><h1>Design System والتسليم للمطور على سلة وزد</h1>
+      <p class="meta"><span>بقلم أسامة عبد الناصر</span><span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> قراءة 5 دقائق</span><span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 17l-5-5-9 8"/></svg> 6 صور توضيحية</span></p></header>
+    <details class="toc-mobile"><summary>في هذا المقال</summary><ol><li><a href="#الثيم-نظام-وليس-صفحات-مرسومة">الثيم نظام، وليس صفحات مرسومة</a></li><li><a href="#1-design-tokens-القرارات-الصغيرة-التي-تتكرر">1. Design Tokens: القرارات الصغيرة التي تتكرر</a></li><li><a href="#2-اختبر-تصميمك-بأكثر-من-لون-أساسي">2. اختبر تصميمك بأكثر من لون أساسي</a></li><li><a href="#3-المكونات-وحالاتها">3. المكونات وحالاتها</a></li><li><a href="#4-ما-الذي-سيغيره-التاجر-خريطة-الإعدادات">4. ما الذي سيغيّره التاجر؟ خريطة الإعدادات</a></li><li><a href="#5-العربي-والإنجليزي-الانعكاس-الصحيح">5. العربي والإنجليزي: الانعكاس الصحيح</a></li><li><a href="#6-ملف-figma-الذي-يحبه-المطور">6. ملف Figma الذي يحبه المطور</a></li><li><a href="#ماذا-تسلم">ماذا تسلّم؟</a></li><li><a href="#الخلاصة">الخلاصة</a></li><li><a href="#المصادر">المصادر</a></li></ol></details>
+    <blockquote>
+<p><strong>ملاحظة مهمة قبل التصميم:</strong> في ثيمات سلة الجديدة (Twilight React)، التاجر يختار اللون الأساسي والخط من لوحة التحكم، والمحرك يحوّلهما إلى متغيرات مثل <code>--color-primary</code> و<code>--font-main</code> يستخدمها الثيم (<a href="https://docs.salla.dev/twilight/react/guide/styling" target="_blank" rel="noopener">Salla Docs: Styling</a>). وزد توصي بنفس الفكرة: الألوان والخطوط تُسحب من إعدادات الثيم ولا تُثبّت في الكود (<a href="https://docs.zid.sa/theme-development.md" target="_blank" rel="noopener">Zid Docs</a>). معنى ذلك أن <strong>اللون الذي اخترته في Figma قد لا يكون اللون الذي سيراه العميل.</strong> صمّم على هذا الأساس. التفاصيل في ملف <a href="notes.html">ملاحظات وتحديثات مهمة</a>.</p>
+</blockquote>
+<hr />
+<h2 id="الثيم-نظام-وليس-صفحات-مرسومة">الثيم نظام، وليس صفحات مرسومة</h2>
+<p>في موقع عادي، تسلّم صفحات مرسومة والمطور ينفذها كما هي. في ثيم سلة أو زد الأمر مختلف: التاجر سيغيّر اللون والخط، ويرفع صورًا لا تعرفها، ويُظهر أقسامًا ويخفي أخرى. لذلك ما تسلّمه فعليًا هو <strong>نظام</strong>: قواعد ومكونات تعمل مهما تغيّر المحتوى.</p>
+<p>هذا المقال عن تحويل تصميمك إلى نظام يفهمه المطور، ويصمد أمام تعديلات التاجر.</p>
+<h2 id="1-design-tokens-القرارات-الصغيرة-التي-تتكرر">1. Design Tokens: القرارات الصغيرة التي تتكرر</h2>
+<p>الـ Token هو قرار تصميمي له اسم: «اللون الأساسي»، «مسافة متوسطة»، «زاوية الكارت». بدل أن يكتب المطور رقمًا في كل مكان، يستخدم الاسم. وعندما يتغير القرار، يتغير في كل المتجر.</p>
+<figure><a class="zoom" href="assets/05-design-system-handoff/01-tokens.webp"><img src="assets/05-design-system-handoff/01-tokens.webp" alt="الـ Design Tokens الأساسية لثيم متجر" loading="lazy" decoding="async"></a><figcaption>صورة 1: الـ Tokens الأساسية: الألوان، والخطوط، والمسافات، والزوايا، والظلال.</figcaption></figure>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>المجموعة</th>
+<th>ماذا تحدد</th>
+<th>ملاحظة لسلة وزد</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>الألوان الأساسية</td>
+<td>اللون الأساسي ودرجاته، ولون النص فوقه</td>
+<td>في سلة يختارها التاجر: <code>--color-primary</code> ودرجاته الفاتحة والداكنة، و<code>--color-primary-reverse</code> للنص فوقه</td>
+</tr>
+<tr>
+<td>الألوان المحايدة</td>
+<td>الخلفيات، والحدود، والنصوص</td>
+<td>ثابتة غالبًا في الثيم</td>
+</tr>
+<tr>
+<td>ألوان المعاني</td>
+<td>الخصم، والنجاح، والتحذير، والخطأ</td>
+<td>لا تربطها باللون الأساسي؛ الأحمر للخصم يبقى أحمر</td>
+</tr>
+<tr>
+<td>الخطوط</td>
+<td>الخط، والأحجام، والأوزان، وارتفاع السطر</td>
+<td>في سلة يختار التاجر الخط: <code>--font-main</code>؛ صمّم بمقاسات تعمل مع أكثر من خط</td>
+</tr>
+<tr>
+<td>المسافات</td>
+<td>سلّم ثابت مثل 4، 8، 12، 16، 24، 32</td>
+<td>استخدم نفس السلّم في كل المكونات</td>
+</tr>
+<tr>
+<td>الزوايا والظلال</td>
+<td>زاوية الأزرار والكروت، ومستويات الظل</td>
+<td>قليلة وواضحة: مستويان أو ثلاثة للظل</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="2-اختبر-تصميمك-بأكثر-من-لون-أساسي">2. اختبر تصميمك بأكثر من لون أساسي</h2>
+<p>لأن التاجر يختار اللون الأساسي، اختبر تصميمك بأربعة ألوان مختلفة على الأقل قبل التسليم: لون داكن، ولون فاتح، ولون مشبع، ولون قريب من لون الخصم. اسأل في كل مرة:</p>
+<ul>
+<li>هل النص فوق الأزرار مقروء؟ (لهذا يوجد <code>--color-primary-reverse</code> في سلة).</li>
+<li>هل يختلط اللون الأساسي مع لون الخصم أو الخطأ؟</li>
+<li>هل يبقى التصميم متوازنًا إذا اختار التاجر لونًا صارخًا؟</li>
+</ul>
+<figure><a class="zoom" href="assets/05-design-system-handoff/02-primary-color-test.webp"><img src="assets/05-design-system-handoff/02-primary-color-test.webp" alt="نفس التصميم بأربعة ألوان أساسية" loading="lazy" decoding="async"></a><figcaption>صورة 2: نفس التصميم بأربعة ألوان أساسية، وحالة فشل عندما يُكتب نص أبيض ثابت فوق لون فاتح.</figcaption></figure>
+<p><strong>الوضع الداكن:</strong> محرك سلة الجديد لا يوفر ثيمًا داكنًا جاهزًا، وكثير من الثيمات تكتفي بخيار فوتر داكن (<a href="https://docs.salla.dev/twilight/react/guide/styling" target="_blank" rel="noopener">Salla Docs: Styling</a>). لا تعد التاجر بوضع داكن كامل قبل الاتفاق مع المطور.</p>
+<h2 id="3-المكونات-وحالاتها">3. المكونات وحالاتها</h2>
+<p>المكوّن الذي لم تُصمم حالاته سيصممها المطور بنفسه، غالبًا بشكل لا يشبه تصميمك. لكل مكوّن تفاعلي، صمّم:</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>المكوّن</th>
+<th>الحالات المطلوبة</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>الأزرار</td>
+<td>عادي، وHover، وضغط، ومعطّل، وتحميل</td>
+</tr>
+<tr>
+<td>الحقول</td>
+<td>فارغ، ومكتوب، وتركيز (Focus)، وخطأ مع رسالة، ونجاح</td>
+</tr>
+<tr>
+<td>الـ Product Card</td>
+<td>عادي، وخصم، وكمية قليلة، ونفذت الكمية، واسم طويل</td>
+</tr>
+<tr>
+<td>الخيارات</td>
+<td>عادي، ومختار، وغير متوفر</td>
+</tr>
+<tr>
+<td>الـ Badges</td>
+<td>خصم، وجديد، والأكثر مبيعًا، ونفذت الكمية</td>
+</tr>
+<tr>
+<td>الرسائل</td>
+<td>نجاح، وتحذير، وخطأ، ومعلومة</td>
+</tr>
+</tbody>
+</table></div>
+<figure><a class="zoom" href="assets/05-design-system-handoff/03-components-states.webp"><img src="assets/05-design-system-handoff/03-components-states.webp" alt="المكونات وحالاتها" loading="lazy" decoding="async"></a><figcaption>صورة 3: الأزرار والحقول والـ Badges والرسائل بكل حالاتها.</figcaption></figure>
+<h2 id="4-ما-الذي-سيغيره-التاجر-خريطة-الإعدادات">4. ما الذي سيغيّره التاجر؟ خريطة الإعدادات</h2>
+<p>قبل التسليم، اكتب قائمة بكل قرار تصميمي يجب أن يكون <strong>إعدادًا</strong> يغيّره التاجر، وكل قرار يبقى <strong>ثابتًا</strong> في الثيم. هذه القائمة يحتاجها المطور ليبني لوحة إعدادات الثيم.</p>
+<p>في ثيمات سلة الجديدة، أنواع الإعدادات الموثقة حاليًا: مفتاح تشغيل وإيقاف (Switch)، وقائمة اختيارات (Dropdown)، وعناوين وفواصل لتنظيم لوحة التحكم (<a href="https://docs.salla.dev/twilight/react/guide/settings" target="_blank" rel="noopener">Salla Docs: Settings</a>). صمّم خياراتك بنفس المنطق:</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>القرار التصميمي</th>
+<th>نوع الإعداد</th>
+<th>مثال</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Header ثابت أثناء التمرير</td>
+<td>Switch</td>
+<td>تشغيل / إيقاف</td>
+</tr>
+<tr>
+<td>فوتر داكن أو فاتح</td>
+<td>Switch</td>
+<td>تشغيل / إيقاف</td>
+</tr>
+<tr>
+<td>نسبة صور المنتجات</td>
+<td>Dropdown</td>
+<td>مربعة / طولية / عرضية</td>
+</tr>
+<tr>
+<td>شكل الـ Header</td>
+<td>Dropdown</td>
+<td>اللوجو في الوسط / اللوجو في الجانب</td>
+</tr>
+<tr>
+<td>عدد المنتجات في الصف</td>
+<td>Dropdown</td>
+<td>3 / 4</td>
+</tr>
+<tr>
+<td>اللون الأساسي والخط</td>
+<td>من لوحة تحكم المتجر</td>
+<td>يختارهما التاجر من إعدادات المتجر</td>
+</tr>
+</tbody>
+</table></div>
+<figure><a class="zoom" href="assets/05-design-system-handoff/04-settings-map.webp"><img src="assets/05-design-system-handoff/04-settings-map.webp" alt="خريطة إعدادات التاجر" loading="lazy" decoding="async"></a><figcaption>صورة 4: من القرار التصميمي إلى إعداد في لوحة تحكم التاجر.</figcaption></figure>
+<p><strong>قاعدة:</strong> كل إعداد تضيفه يضاعف الحالات التي يجب أن تصممها وتختبرها. أضف الإعداد عندما يحتاجه التجار فعلًا، وليس لأنه ممكن.</p>
+<h2 id="5-العربي-والإنجليزي-الانعكاس-الصحيح">5. العربي والإنجليزي: الانعكاس الصحيح</h2>
+<p>أغلب متاجر سلة وزد بلغتين، والتصميم ينعكس بالكامل بين RTL وLTR. وثائق سلة توصي المطورين باستخدام خصائص منطقية مثل «بداية» و«نهاية» بدل «يمين» و«يسار» حتى يعمل نفس التصميم في اللغتين (<a href="https://docs.salla.dev/twilight/react/guide/styling" target="_blank" rel="noopener">Salla Docs: Styling</a>). على المصمم أن يحدد ما ينعكس وما لا ينعكس:</p>
+<ul>
+<li><strong>ينعكس:</strong> ترتيب العناصر، والأسهم التي تدل على الاتجاه (التالي والسابق)، والسلايدرات، والمسافات الجانبية، وموضع الأيقونة داخل الزر.</li>
+<li><strong>لا ينعكس:</strong> الأرقام والأسعار، وأيقونة التشغيل، وعلامة الصح، والشعارات، والصور.</li>
+</ul>
+<figure><a class="zoom" href="assets/05-design-system-handoff/05-rtl-ltr.webp"><img src="assets/05-design-system-handoff/05-rtl-ltr.webp" alt="الانعكاس بين العربي والإنجليزي" loading="lazy" decoding="async"></a><figcaption>صورة 5: نفس المكوّن بالعربي والإنجليزي، وما ينعكس وما لا ينعكس.</figcaption></figure>
+<h2 id="6-ملف-figma-الذي-يحبه-المطور">6. ملف Figma الذي يحبه المطور</h2>
+<p>ملف Figma المنظم يوفر ساعات من الأسئلة. هذا الهيكل الذي أستخدمه في مشاريعي:</p>
+<ol>
+<li><strong>Cover:</strong> اسم المشروع، والمنصة (سلة أو زد)، والإصدار، والتاريخ.</li>
+<li><strong>Foundations:</strong> الـ Tokens: الألوان، والخطوط، والمسافات، والزوايا، والظلال، والأيقونات.</li>
+<li><strong>Components:</strong> كل المكونات بكل حالاتها، باستخدام Variants.</li>
+<li><strong>Pages – Desktop:</strong> كل الصفحات على الديسكتوب.</li>
+<li><strong>Pages – Mobile:</strong> كل الصفحات على الموبايل.</li>
+<li><strong>States &amp; Edge Cases:</strong> الحالات الفارغة، والأخطاء، والأسماء الطويلة، والصور غير المتناسقة.</li>
+<li><strong>Prototype:</strong> الرحلات الأساسية: من الصفحة الرئيسية حتى السلة.</li>
+<li><strong>Handoff:</strong> ملاحظات التنفيذ، وحالة كل مكوّن.</li>
+</ol>
+<h3 id="حالة-كل-مكون">حالة كل مكوّن</h3>
+<p>بجانب كل مكوّن، ضع علامة توضح حالته مع المنصة، بنفس سلّم القرار من <a href="01-homepage.html">المقال الأول</a>:</p>
+<ul>
+<li><strong>جاهز:</strong> مكوّن موجود في المنصة، والتغيير بالإعدادات والألوان فقط.</li>
+<li><strong>معدّل:</strong> مكوّن موجود، مع تعديل في الشكل أو الترتيب.</li>
+<li><strong>مخصص:</strong> مكوّن جديد يبنيه المطور من الصفر.</li>
+</ul>
+<figure><a class="zoom" href="assets/05-design-system-handoff/06-figma-handoff.webp"><img src="assets/05-design-system-handoff/06-figma-handoff.webp" alt="هيكل ملف Figma للتسليم" loading="lazy" decoding="async"></a><figcaption>صورة 6: هيكل ملف Figma للتسليم، وعلامات حالة المكونات.</figcaption></figure>
+<h2 id="ماذا-تسلم">ماذا تسلّم؟</h2>
+<ul class="checklist">
+<li class="task"><label><input type="checkbox"><span>رابط ملف Figma منظم بالهيكل أعلاه.</span></label></li>
+<li class="task"><label><input type="checkbox"><span>جدول الـ Tokens: الألوان والخطوط والمسافات بأسمائها.</span></label></li>
+<li class="task"><label><input type="checkbox"><span>قائمة المكونات مع حالة كل مكوّن: جاهز، أو معدّل، أو مخصص.</span></label></li>
+<li class="task"><label><input type="checkbox"><span>خريطة إعدادات التاجر: ما يتغير وما يبقى ثابتًا.</span></label></li>
+<li class="task"><label><input type="checkbox"><span>الأيقونات بصيغة SVG، والصور مضغوطة ومناسبة للويب.</span></label></li>
+<li class="task"><label><input type="checkbox"><span>اسم الخط ورخصة استخدامه على الويب.</span></label></li>
+<li class="task"><label><input type="checkbox"><span>تصميم الحالات الفارغة والأخطاء والأسماء الطويلة.</span></label></li>
+<li class="task"><label><input type="checkbox"><span>اختبار التصميم بأربعة ألوان أساسية مختلفة.</span></label></li>
+<li class="task"><label><input type="checkbox"><span>نسخة RTL ونسخة LTR للصفحات الأساسية.</span></label></li>
+<li class="task"><label><input type="checkbox"><span>دليل تصوير مختصر للتاجر.</span></label></li>
+</ul>
+<h2 id="الخلاصة">الخلاصة</h2>
+<p>التصميم الجميل في Figma ليس نهاية العمل على سلة وزد. النهاية الحقيقية متجر يعمل بشكل جميل بعد أن يغيّر التاجر لونه، ويرفع صوره، ويكتب أسماء منتجاته الطويلة. صمّم النظام، لا الصورة.</p>
+<h2 id="المصادر">المصادر</h2>
+<ul>
+<li><a href="https://docs.salla.dev/twilight/react/guide/styling" target="_blank" rel="noopener">Salla Docs: Styling</a></li>
+<li><a href="https://docs.salla.dev/twilight/react/guide/settings" target="_blank" rel="noopener">Salla Docs: Settings</a></li>
+<li><a href="https://docs.zid.sa/theme-development.md" target="_blank" rel="noopener">Zid Docs: Theme Development</a></li>
+</ul>
+    <nav class="pager" aria-label="التنقل بين المقالات"><a class="pg prev" href="04-cart-checkout.html"><span class="pg-dir"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg> المقال السابق</span><span class="pg-title">04 — السلة وإتمام الطلب</span></a><a class="pg next" href="index.html"><span class="pg-dir">العودة للسلسلة <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></span><span class="pg-title">06 — دراسة حالة (قريبًا)</span></a></nav>
+  </article>
+</main>
+<footer class="site-foot"><div class="wrap foot-in">
+  <div><div class="foot-name">أسامة عبد الناصر</div><div class="foot-role">مصمم منتجات رقمية UX/UI</div></div>
+  <nav class="foot-links"><a href="https://osama-abdelnaser.com" target="_blank" rel="noopener">الموقع الشخصي</a><a href="https://www.behance.net/osamaabdelnaser1" target="_blank" rel="noopener">Behance</a><a href="https://www.linkedin.com/in/osama-abdelnaser" target="_blank" rel="noopener">LinkedIn</a><a href="https://github.com/OSA98/salla-zid-ecommerce-design" target="_blank" rel="noopener">GitHub</a></nav>
+  <div class="foot-copy">© أسامة عبد الناصر. المحتوى متاح للتعلم والمشاركة مع ذكر المصدر.</div>
+</div></footer>
+<div class="lightbox" hidden><button class="lb-close" aria-label="إغلاق">×</button><img alt=""></div>
+<script src="assets/site.js"></script>
+</body>
+</html>

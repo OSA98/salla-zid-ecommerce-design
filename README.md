@@ -4,6 +4,8 @@
 
 سلسلة مقالات عملية بالعربي عن تصميم واجهات وتجربة المتاجر الإلكترونية على **سلة** و**زد**، مدعومة بصور توضيحية مرسومة خصيصًا للشرح.
 
+### [اقرأ السلسلة على موقعها ←](https://osa98.github.io/salla-zid-ecommerce-design/)
+
 كتبها **أسامة عبد الناصر**، مصمم منتجات رقمية UX/UI. منذ أكتوبر 2024 صمم 23 ثيمًا لمتاجر سلة، و11 متجرًا حيًا لعلامات تجارية على سلة وزد وShopify.
 
 > **ابدأ بالأساس، افهم الـ UX، ثم ابنِ عليه بحرية.**
@@ -12,11 +14,11 @@
 
 | # | المقال | ماذا يغطي | نسخة Notion |
 | --- | --- | --- | --- |
-| 01 | [الصفحة الرئيسية](articles/01-homepage/README.md) | Hero، الأقسام، البانرات، الـ Product Card، أقسام الثقة، الفوتر، وحدود المنصة | [Notion](notion/01-homepage.zip) |
-| 02 | [صفحة قائمة المنتجات والفلترة](articles/02-product-listing/README.md) | رأس القسم، الفلاتر، الترتيب، الشبكة، التنقل بين النتائج، والحالات الفارغة | [Notion](notion/02-product-listing.zip) |
-| 03 | [صفحة المنتج](articles/03-product-page/README.md) | المعرض، السعر، الخيارات وحالاتها، زر الإضافة، الثقة، والموبايل | [Notion](notion/03-product-page.zip) |
-| 04 | [السلة وإتمام الطلب](articles/04-cart-checkout/README.md) | السلة الجانبية، صفحة السلة، السلة الفارغة، صفحة تأكيد الطلب، وما يتحكم فيه الثيم | [Notion](notion/04-cart-checkout.zip) |
-| 05 | [Design System والتسليم للمطور](articles/05-design-system-handoff/README.md) | Tokens، المكونات وحالاتها، إعدادات التاجر، ملف Figma، والتسليم | [Notion](notion/05-design-system-handoff.zip) |
+| 01 | [الصفحة الرئيسية](articles/01-homepage/README.md) · [الموقع](https://osa98.github.io/salla-zid-ecommerce-design/01-homepage.html) | Hero، الأقسام، البانرات، الـ Product Card، أقسام الثقة، الفوتر، وحدود المنصة | [Notion](notion/01-homepage.zip) |
+| 02 | [صفحة قائمة المنتجات والفلترة](articles/02-product-listing/README.md) · [الموقع](https://osa98.github.io/salla-zid-ecommerce-design/02-product-listing.html) | رأس القسم، الفلاتر، الترتيب، الشبكة، التنقل بين النتائج، والحالات الفارغة | [Notion](notion/02-product-listing.zip) |
+| 03 | [صفحة المنتج](articles/03-product-page/README.md) · [الموقع](https://osa98.github.io/salla-zid-ecommerce-design/03-product-page.html) | المعرض، السعر، الخيارات وحالاتها، زر الإضافة، الثقة، والموبايل | [Notion](notion/03-product-page.zip) |
+| 04 | [السلة وإتمام الطلب](articles/04-cart-checkout/README.md) · [الموقع](https://osa98.github.io/salla-zid-ecommerce-design/04-cart-checkout.html) | السلة الجانبية، صفحة السلة، السلة الفارغة، صفحة تأكيد الطلب، وما يتحكم فيه الثيم | [Notion](notion/04-cart-checkout.zip) |
+| 05 | [Design System والتسليم للمطور](articles/05-design-system-handoff/README.md) · [الموقع](https://osa98.github.io/salla-zid-ecommerce-design/05-design-system-handoff.html) | Tokens، المكونات وحالاتها، إعدادات التاجر، ملف Figma، والتسليم | [Notion](notion/05-design-system-handoff.zip) |
 | 06 | دراسة حالة: متجر حقيقي من الفكرة حتى الإطلاق | من إعداد أسامة، بالصور والشرح | قريبًا |
 
 ## قبل أن تبدأ: ملاحظات مهمة
@@ -31,6 +33,7 @@
 
 ## كيف تقرأ السلسلة؟
 
+- **على موقع السلسلة (الأفضل):** [osa98.github.io/salla-zid-ecommerce-design](https://osa98.github.io/salla-zid-ecommerce-design/)، بفهرس لكل مقال وتنقل بين المقالات وصور تكبر عند الضغط.
 - **على GitHub:** افتح أي مقال من الجدول، والصور تظهر داخله.
 - **على Notion:** حمّل ملف الـ zip الخاص بالمقال من مجلد [notion](notion/README.md)، واتبع خطوات الاستيراد المكتوبة هناك.
 

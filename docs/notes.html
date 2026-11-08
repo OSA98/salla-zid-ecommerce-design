@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ملاحظات وتحديثات مهمة · تصميم المتاجر على سلة وزد</title>
+<meta name="description" content="ملاحظات من الوثائق الرسمية لسلة وزد تؤثر على قرارات المصمم.">
+<meta name="author" content="أسامة عبد الناصر">
+<link rel="canonical" href="https://osa98.github.io/salla-zid-ecommerce-design/notes.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="ملاحظات وتحديثات مهمة · تصميم المتاجر على سلة وزد">
+<meta property="og:description" content="ملاحظات من الوثائق الرسمية لسلة وزد تؤثر على قرارات المصمم.">
+<meta property="og:url" content="https://osa98.github.io/salla-zid-ecommerce-design/notes.html">
+<meta property="og:image" content="https://osa98.github.io/salla-zid-ecommerce-design/assets/og.png">
+<meta property="og:locale" content="ar_AR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#12201C">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div class="progress" aria-hidden="true"><span></span></div>
+<header class="topbar"><div class="wrap topbar-in">
+  <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"></span><span>تصميم المتاجر على سلة وزد</span></a>
+  <button class="menu-btn" aria-label="القائمة" aria-expanded="false"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+  <nav class="nav" aria-label="المقالات"><a href="01-homepage.html" class=""><b>01</b>الصفحة الرئيسية</a><a href="02-product-listing.html" class=""><b>02</b>قائمة المنتجات</a><a href="03-product-page.html" class=""><b>03</b>صفحة المنتج</a><a href="04-cart-checkout.html" class=""><b>04</b>السلة والطلب</a><a href="05-design-system-handoff.html" class=""><b>05</b>Design System</a><a href="notes.html" class="on">ملاحظات مهمة</a><a class="gh" href="https://github.com/OSA98/salla-zid-ecommerce-design" target="_blank" rel="noopener" aria-label="الريبو على GitHub"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-4 1.5-4-2-6-2.5M15 21v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.3 4.3 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12 12 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.3 4.3 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg><span>GitHub</span></a></nav>
+</div></header>
+
+<main class="wrap narrow"><article class="prose wide">
+  <nav class="crumbs"><a href="index.html">السلسلة</a><span>/</span><span>ملاحظات مهمة</span></nav>
+  <header class="article-head"><span class="kicker">مرجع</span><h1>ملاحظات وتحديثات مهمة</h1></header>
+  <p>أشياء وجدتها أثناء مراجعة الوثائق الرسمية لسلة وزد، وتؤثر مباشرة على قرارات المصمم. المنصات تتغير باستمرار، فراجع الرابط الرسمي قبل أي وعد للعميل.</p>
+<p>آخر مراجعة: نوفمبر 2026.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>الملاحظة</th>
+<th>ماذا تعني للمصمم</th>
+<th>المصدر</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>وثائق سلة الحالية تقدم نظام Twilight المبني على React، ومحرك Twilight القديم المبني على Twig مصنّف كـ Deprecated</td>
+<td>الثيمات الجديدة على سلة تُبنى بطريقة مختلفة؛ اسأل المطور على أي نظام سيبني قبل التصميم</td>
+<td><a href="https://docs.salla.dev/twilight/react/start/what-is-a-theme" target="_blank" rel="noopener">Salla Docs: Twilight React</a> · <a href="https://docs.salla.dev/422558m0" target="_blank" rel="noopener">Salla Docs: Home Page</a></td>
+</tr>
+<tr>
+<td>ثيمات زد أصبحت تُبنى على نظام Vitrin بقوالب Jinja، والثيمات المبنية على Twig أصبحت Deprecated وتحتاج إلى ترحيل</td>
+<td>نفس الملاحظة: تأكد من النظام الذي سيُبنى عليه المتجر</td>
+<td><a href="https://docs.zid.sa/theme-development.md" target="_blank" rel="noopener">Zid Docs: Theme Development</a></td>
+</tr>
+<tr>
+<td>زد: الصفحة التي لا يصممها الثيم تأخذ الشكل الافتراضي من ثيم زد الأساسي</td>
+<td>يمكنك تصميم الصفحات المهمة فقط، لكن انتبه لاختلاف الشكل بين صفحاتك والصفحات الافتراضية</td>
+<td><a href="https://docs.zid.sa/theme-development.md" target="_blank" rel="noopener">Zid Docs: Theme Development</a></td>
+</tr>
+<tr>
+<td>زد توصي بسحب الألوان والخطوط والمسافات من إعدادات الثيم، وعدم تثبيتها في الكود</td>
+<td>صمّم بنظام Design Tokens، لأن هذه القيم ستصبح إعدادات يغيّرها التاجر</td>
+<td><a href="https://docs.zid.sa/theme-development.md" target="_blank" rel="noopener">Zid Docs: Theme Development</a></td>
+</tr>
+<tr>
+<td>إعدادات التاجر في Twilight React الموثقة حاليًا: مفتاح تشغيل (Switch)، وقائمة اختيارات (Dropdown)، وعناوين وفواصل للوحة التحكم</td>
+<td>لا تعد التاجر بإعدادات ألوان أو خطوط أو صور مخصصة قبل التأكد من مرجع twilight.json مع المطور</td>
+<td><a href="https://docs.salla.dev/twilight/react/guide/settings" target="_blank" rel="noopener">Salla Docs: Settings</a></td>
+</tr>
+<tr>
+<td>في Twilight React، التاجر يختار اللون الأساسي والخط من لوحة التحكم، والمحرك يحوّلهما إلى متغيرات مثل <code>--color-primary</code> و<code>--color-primary-reverse</code> و<code>--font-main</code></td>
+<td>اللون الذي تختاره في Figma قد لا يراه العميل؛ اختبر التصميم بأكثر من لون أساسي، واستخدم لون النص المتغير فوق الأزرار</td>
+<td><a href="https://docs.salla.dev/twilight/react/guide/styling" target="_blank" rel="noopener">Salla Docs: Styling</a></td>
+</tr>
+<tr>
+<td>محرك سلة الجديد لا يوفر ثيمًا داكنًا جاهزًا، وكثير من الثيمات تكتفي بخيار فوتر داكن</td>
+<td>لا تعد التاجر بوضع داكن كامل قبل الاتفاق مع المطور</td>
+<td><a href="https://docs.salla.dev/twilight/react/guide/styling" target="_blank" rel="noopener">Salla Docs: Styling</a></td>
+</tr>
+<tr>
+<td>وثائق سلة توصي باستخدام خصائص منطقية (بداية ونهاية) بدل يمين ويسار حتى يعمل التصميم بالعربي والإنجليزي</td>
+<td>حدد في التصميم ما ينعكس بين RTL وLTR وما لا ينعكس</td>
+<td><a href="https://docs.salla.dev/twilight/react/guide/styling" target="_blank" rel="noopener">Salla Docs: Styling</a></td>
+</tr>
+<tr>
+<td>متطلبات مراجعة ثيمات سلة: اسم المنتج يظهر كاملًا دون اختصار في عناصر القوائم، والشبكة لا تنكسر مع اختلاف نسب الصور، ورسالة واضحة عند عدم وجود منتجات</td>
+<td>إذا كان الثيم سيُنشر في متجر ثيمات سلة، صمّم الكارت ليتحمل الأسماء الطويلة والصور غير المتناسقة</td>
+<td><a href="https://docs.salla.dev/421887m0" target="_blank" rel="noopener">Salla Docs: UI / UX Review</a></td>
+</tr>
+<tr>
+<td>متطلبات مراجعة ثيمات سلة لصفحة المنتج: تغيّر الصورة والسعر وحالة النفاد مع الخيار المختار، وزر إضافة يتعطل أو يتغير عند نفاد التركيبة، ومؤشر شمول الضريبة</td>
+<td>صمّم كل حالات الخيارات، وليس الحالة المثالية فقط</td>
+<td><a href="https://docs.salla.dev/421887m0" target="_blank" rel="noopener">Salla Docs: UI / UX Review</a></td>
+</tr>
+<tr>
+<td>متطلبات مراجعة ثيمات سلة لصفحة السلة: ملاحظات الطلب، وأكواد الخصم، وأزرار الدفع المباشر، وتحديث الإجمالي عند تغيير الكمية</td>
+<td>هذه عناصر إلزامية في تصميم السلة لثيمات متجر سلة</td>
+<td><a href="https://docs.salla.dev/421887m0" target="_blank" rel="noopener">Salla Docs: UI / UX Review</a></td>
+</tr>
+<tr>
+<td>قوائم صفحات الثيم في وثائق سلة (Twilight React) وزد (Vitrin) لا تتضمن صفحة إتمام الطلب (Checkout)</td>
+<td>مساحة تحكم المصمم الأكبر هي صفحة السلة وصفحة تأكيد الطلب؛ لا تفترض أن خطوات الدفع نفسها قابلة لإعادة التصميم قبل التأكد مع المطور</td>
+<td><a href="https://docs.salla.dev/twilight/react/routes" target="_blank" rel="noopener">Salla Docs: Routes</a> · <a href="https://docs.zid.sa/overview-1379323m0" target="_blank" rel="noopener">Zid Docs: Templates</a></td>
+</tr>
+<tr>
+<td>سلة: الحد الأقصى لحجم الثيم العام 1MB، والثيم الخاص 2MB، والثيم يجب أن يختلف بوضوح عن ثيم «رائد»</td>
+<td>راعِ حجم الصور والخطوط والأيقونات المضمّنة في الثيم نفسه</td>
+<td><a href="https://docs.salla.dev/421886m0" target="_blank" rel="noopener">Salla Docs: Main Requirements</a></td>
+</tr>
+<tr>
+<td>سلة توفر Figma Template رسميًا للثيمات ضمن وثائق المراجعة</td>
+<td>ابدأ منه لتفهم المكونات والصفحات المطلوبة قبل أن تصمم من الصفر</td>
+<td><a href="https://docs.salla.dev/421885m0" target="_blank" rel="noopener">Salla Docs: Requirements Overview</a></td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="موارد-figma">موارد Figma</h2>
+<ul>
+<li><a href="https://www.figma.com/community/file/1268914036251108812" target="_blank" rel="noopener">ملف Figma المرجعي المرفق مع السلسلة</a></li>
+<li>قالب Figma الرسمي لثيمات سلة: مذكور في <a href="https://docs.salla.dev/421885m0" target="_blank" rel="noopener">وثائق متطلبات الثيمات</a></li>
+</ul>
+  <nav class="pager"><span></span><a class="pg next" href="01-homepage.html"><span class="pg-dir">ابدأ السلسلة <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></span><span class="pg-title">01 — الصفحة الرئيسية</span></a></nav>
+</article></main>
+<footer class="site-foot"><div class="wrap foot-in">
+  <div><div class="foot-name">أسامة عبد الناصر</div><div class="foot-role">مصمم منتجات رقمية UX/UI</div></div>
+  <nav class="foot-links"><a href="https://osama-abdelnaser.com" target="_blank" rel="noopener">الموقع الشخصي</a><a href="https://www.behance.net/osamaabdelnaser1" target="_blank" rel="noopener">Behance</a><a href="https://www.linkedin.com/in/osama-abdelnaser" target="_blank" rel="noopener">LinkedIn</a><a href="https://github.com/OSA98/salla-zid-ecommerce-design" target="_blank" rel="noopener">GitHub</a></nav>
+  <div class="foot-copy">© أسامة عبد الناصر. المحتوى متاح للتعلم والمشاركة مع ذكر المصدر.</div>
+</div></footer>
+<div class="lightbox" hidden><button class="lb-close" aria-label="إغلاق">×</button><img alt=""></div>
+<script src="assets/site.js"></script>
+</body>
+</html>

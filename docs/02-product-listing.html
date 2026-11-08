@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>صفحة قائمة المنتجات والفلترة · تصميم المتاجر على سلة وزد</title>
+<meta name="description" content="رأس القسم، الفلاتر، الترتيب، الشبكة، التنقل بين النتائج، والحالات الفارغة">
+<meta name="author" content="أسامة عبد الناصر">
+<link rel="canonical" href="https://osa98.github.io/salla-zid-ecommerce-design/02-product-listing.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="صفحة قائمة المنتجات والفلترة · تصميم المتاجر على سلة وزد">
+<meta property="og:description" content="رأس القسم، الفلاتر، الترتيب، الشبكة، التنقل بين النتائج، والحالات الفارغة">
+<meta property="og:url" content="https://osa98.github.io/salla-zid-ecommerce-design/02-product-listing.html">
+<meta property="og:image" content="https://osa98.github.io/salla-zid-ecommerce-design/assets/og.png">
+<meta property="og:locale" content="ar_AR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#12201C">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div class="progress" aria-hidden="true"><span></span></div>
+<header class="topbar"><div class="wrap topbar-in">
+  <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"></span><span>تصميم المتاجر على سلة وزد</span></a>
+  <button class="menu-btn" aria-label="القائمة" aria-expanded="false"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+  <nav class="nav" aria-label="المقالات"><a href="01-homepage.html" class=""><b>01</b>الصفحة الرئيسية</a><a href="02-product-listing.html" class="on"><b>02</b>قائمة المنتجات</a><a href="03-product-page.html" class=""><b>03</b>صفحة المنتج</a><a href="04-cart-checkout.html" class=""><b>04</b>السلة والطلب</a><a href="05-design-system-handoff.html" class=""><b>05</b>Design System</a><a href="notes.html" class="">ملاحظات مهمة</a><a class="gh" href="https://github.com/OSA98/salla-zid-ecommerce-design" target="_blank" rel="noopener" aria-label="الريبو على GitHub"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-4 1.5-4-2-6-2.5M15 21v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.3 4.3 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12 12 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.3 4.3 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg><span>GitHub</span></a></nav>
+</div></header>
+
+<main class="wrap article-layout">
+  <aside class="toc" aria-label="محتوى المقال"><div class="toc-title">في هذا المقال</div><ol><li><a href="#الصفحة-التي-يقارن-فيها-العميل">الصفحة التي يقارن فيها العميل</a></li><li><a href="#تشريح-الصفحة">تشريح الصفحة</a></li><li><a href="#رأس-القسم-قصير-ومفيد">رأس القسم: قصير ومفيد</a></li><li><a href="#الأقسام-الفرعية-الطريق-المختصر">الأقسام الفرعية: الطريق المختصر</a></li><li><a href="#الفلاتر-ساعد-العميل-أن-يستبعد">الفلاتر: ساعد العميل أن يستبعد</a></li><li><a href="#الترتيب-sort">الترتيب (Sort)</a></li><li><a href="#شبكة-المنتجات">شبكة المنتجات</a></li><li><a href="#pagination-أم-عرض-المزيد-أم-التمرير-اللانهائي">Pagination أم «عرض المزيد» أم التمرير اللانهائي؟</a></li><li><a href="#الموبايل-الفلاتر-في-bottom-sheet">الموبايل: الفلاتر في Bottom Sheet</a></li><li><a href="#الحالات-الفارغة-لا-تترك-العميل-أمام-صفحة-بيضاء">الحالات الفارغة: لا تترك العميل أمام صفحة بيضاء</a></li><li><a href="#قائمة-مراجعة-قبل-تسليم-صفحة-القائمة">قائمة مراجعة قبل تسليم صفحة القائمة</a></li><li><a href="#المصادر">المصادر</a></li></ol>
+    <div class="toc-extra"><a href="https://github.com/OSA98/salla-zid-ecommerce-design/tree/main/articles/02-product-listing" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-4 1.5-4-2-6-2.5M15 21v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.3 4.3 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12 12 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.3 4.3 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg> المقال على GitHub</a><a href="https://github.com/OSA98/salla-zid-ecommerce-design/raw/main/notion/02-product-listing.zip"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg> نسخة Notion</a></div></aside>
+  <article class="prose">
+    <nav class="crumbs"><a href="index.html">السلسلة</a><span>/</span><span>المقال 02 من 5</span></nav>
+    <header class="article-head"><span class="kicker">المقال 02</span><h1>صفحة قائمة المنتجات والفلترة</h1>
+      <p class="meta"><span>بقلم أسامة عبد الناصر</span><span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> قراءة 6 دقائق</span><span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 17l-5-5-9 8"/></svg> 5 صور توضيحية</span></p></header>
+    <details class="toc-mobile"><summary>في هذا المقال</summary><ol><li><a href="#الصفحة-التي-يقارن-فيها-العميل">الصفحة التي يقارن فيها العميل</a></li><li><a href="#تشريح-الصفحة">تشريح الصفحة</a></li><li><a href="#رأس-القسم-قصير-ومفيد">رأس القسم: قصير ومفيد</a></li><li><a href="#الأقسام-الفرعية-الطريق-المختصر">الأقسام الفرعية: الطريق المختصر</a></li><li><a href="#الفلاتر-ساعد-العميل-أن-يستبعد">الفلاتر: ساعد العميل أن يستبعد</a></li><li><a href="#الترتيب-sort">الترتيب (Sort)</a></li><li><a href="#شبكة-المنتجات">شبكة المنتجات</a></li><li><a href="#pagination-أم-عرض-المزيد-أم-التمرير-اللانهائي">Pagination أم «عرض المزيد» أم التمرير اللانهائي؟</a></li><li><a href="#الموبايل-الفلاتر-في-bottom-sheet">الموبايل: الفلاتر في Bottom Sheet</a></li><li><a href="#الحالات-الفارغة-لا-تترك-العميل-أمام-صفحة-بيضاء">الحالات الفارغة: لا تترك العميل أمام صفحة بيضاء</a></li><li><a href="#قائمة-مراجعة-قبل-تسليم-صفحة-القائمة">قائمة مراجعة قبل تسليم صفحة القائمة</a></li><li><a href="#المصادر">المصادر</a></li></ol></details>
+    <blockquote>
+<p><strong>ملاحظة مهمة قبل التصميم:</strong> متطلبات مراجعة ثيمات سلة تطلب في عناصر القوائم أن يظهر اسم المنتج كاملًا دون اختصار، وألا تنكسر الشبكة عندما تختلف نسب الصور، وأن تظهر رسالة واضحة عندما لا يحتوي القسم على منتجات (<a href="https://docs.salla.dev/421887m0" target="_blank" rel="noopener">Salla Docs</a>). التفاصيل في ملف <a href="notes.html">ملاحظات وتحديثات مهمة</a>.</p>
+</blockquote>
+<hr />
+<h2 id="الصفحة-التي-يقارن-فيها-العميل">الصفحة التي يقارن فيها العميل</h2>
+<p>في الصفحة الرئيسية يكتشف العميل المتجر. أما في صفحة قائمة المنتجات (Product Listing Page) فهو يقارن ويضيّق الاختيارات حتى يصل إلى منتج واحد. لذلك نجاح هذه الصفحة يقاس بسؤال واحد: <strong>كم خطوة يحتاج العميل ليصل إلى المنتج المناسب؟</strong></p>
+<p>العميل يصل إلى هذه الصفحة من أكثر من باب، والصفحة نفسها تخدمها كلها:</p>
+<ul>
+<li><strong>قسم أو قسم فرعي:</strong> مثل «أدوات التحضير».</li>
+<li><strong>علامة تجارية:</strong> كل منتجات براند واحد.</li>
+<li><strong>عروض أو Tag:</strong> مثل «العروض» أو «وصل حديثًا».</li>
+<li><strong>نتائج البحث:</strong> ما كتبه العميل في خانة البحث.</li>
+</ul>
+<p>في سلة مثلًا، صفحة قائمة المنتجات تعرض منتجات من قسم أو عرض أو Tag أو نتائج بحث (<a href="https://docs.salla.dev/422559m0" target="_blank" rel="noopener">Salla Docs</a>). وفي زد توجد قوالب منفصلة لصفحة القسم، وصفحة كل المنتجات، وصفحة البراند (<a href="https://docs.zid.sa/overview-1379323m0" target="_blank" rel="noopener">Zid Docs</a>). التصميم واحد في الأساس، مع اختلاف رأس الصفحة حسب المصدر.</p>
+<h2 id="تشريح-الصفحة">تشريح الصفحة</h2>
+<figure><a class="zoom" href="assets/02-product-listing/01-plp-anatomy.webp"><img src="assets/02-product-listing/01-plp-anatomy.webp" alt="تشريح صفحة قائمة المنتجات" loading="lazy" decoding="async"></a><figcaption>صورة 1: تشريح صفحة قائمة المنتجات على الديسكتوب.</figcaption></figure>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>#</th>
+<th>العنصر</th>
+<th>وظيفته</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Breadcrumb</td>
+<td>يخبر العميل أين هو، ويعيده خطوة للخلف بضغطة</td>
+</tr>
+<tr>
+<td>2</td>
+<td>رأس القسم</td>
+<td>العنوان والوصف وصورة القسم</td>
+</tr>
+<tr>
+<td>3</td>
+<td>الأقسام الفرعية</td>
+<td>طريق مختصر قبل الفلاتر</td>
+</tr>
+<tr>
+<td>4</td>
+<td>شريط الأدوات</td>
+<td>عدد النتائج، والترتيب، وتبديل طريقة العرض</td>
+</tr>
+<tr>
+<td>5</td>
+<td>الفلاتر المطبّقة</td>
+<td>ما اختاره العميل، مع إزالة سريعة</td>
+</tr>
+<tr>
+<td>6</td>
+<td>الفلاتر</td>
+<td>تضييق النتائج حسب السعر والبراند والخيارات</td>
+</tr>
+<tr>
+<td>7</td>
+<td>شبكة المنتجات</td>
+<td>الـ Product Cards نفسها</td>
+</tr>
+<tr>
+<td>8</td>
+<td>التنقل بين الصفحات</td>
+<td>Pagination أو «عرض المزيد»</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="رأس-القسم-قصير-ومفيد">رأس القسم: قصير ومفيد</h2>
+<p>رأس القسم يقول للعميل إنه في المكان الصحيح. متطلبات مراجعة ثيمات سلة تطلب في صفحة القسم أن يظهر العنوان كاملًا، ووصف القسم، وصورته (<a href="https://docs.salla.dev/421887m0" target="_blank" rel="noopener">Salla Docs</a>).</p>
+<ul>
+<li><strong>العنوان:</strong> اسم القسم كما هو، بدون اختصار.</li>
+<li><strong>الوصف:</strong> سطر أو سطران فقط. الوصف الطويل المكتوب للـ SEO مكانه أسفل الصفحة، بعد المنتجات.</li>
+<li><strong>الصورة:</strong> اختيارية في التصميم، لكن صمّم لها مكانًا يتحمل غيابها؛ ليس كل تاجر سيرفع صورة لكل قسم.</li>
+</ul>
+<p><strong>الخطأ الشائع:</strong> بانر ضخم أعلى القسم يدفع المنتجات أسفل الشاشة. العميل جاء ليرى المنتجات، فاجعل أول صف منها ظاهرًا من أول نظرة، خصوصًا على الموبايل.</p>
+<h2 id="الأقسام-الفرعية-الطريق-المختصر">الأقسام الفرعية: الطريق المختصر</h2>
+<p>قبل أن يفتح العميل الفلاتر، اعرض له الأقسام الفرعية كـ Chips أفقية أسفل رأس القسم. ضغطة واحدة على «مطاحن» أسرع من فتح الفلتر واختيار التصنيف. وإذا كانت كثيرة، اجعلها قابلة للتمرير الأفقي على الموبايل.</p>
+<h2 id="الفلاتر-ساعد-العميل-أن-يستبعد">الفلاتر: ساعد العميل أن يستبعد</h2>
+<p>الفلتر الجيد لا يعرض كل البيانات الموجودة؛ يعرض ما يساعد العميل على الاستبعاد بسرعة. اختر الفلاتر حسب طبيعة المتجر:</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>نوع الفلتر</th>
+<th>الشكل المناسب</th>
+<th>مثال</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>قائمة اختيارات</td>
+<td>Checkboxes مع عدد النتائج</td>
+<td>البراند، التصنيف</td>
+</tr>
+<tr>
+<td>مدى رقمي</td>
+<td>Range Slider مع حقلين للأرقام</td>
+<td>السعر</td>
+</tr>
+<tr>
+<td>لون</td>
+<td>دوائر ألوان مع اسم اللون</td>
+<td>لون المنتج</td>
+</tr>
+<tr>
+<td>مقاس أو سعة</td>
+<td>Chips</td>
+<td>المقاس، الحجم، السعة</td>
+</tr>
+<tr>
+<td>تقييم</td>
+<td>نجوم «فأعلى»</td>
+<td>4 نجوم فأعلى</td>
+</tr>
+<tr>
+<td>توفر</td>
+<td>Toggle</td>
+<td>المتوفر فقط</td>
+</tr>
+</tbody>
+</table></div>
+<figure><a class="zoom" href="assets/02-product-listing/02-filters.webp"><img src="assets/02-product-listing/02-filters.webp" alt="أنواع الفلاتر ومكوناتها" loading="lazy" decoding="async"></a><figcaption>صورة 2: أنواع الفلاتر، والفلاتر المطبّقة، وعدد النتائج.</figcaption></figure>
+<h3 id="قواعد-تجعل-الفلتر-مفيدا">قواعد تجعل الفلتر مفيدًا</h3>
+<ul>
+<li><strong>اعرض عدد النتائج</strong> بجانب كل اختيار؛ العميل لا يحب أن يضغط على اختيار يعطيه صفرًا.</li>
+<li><strong>أظهر الفلاتر المطبّقة</strong> كـ Chips أعلى النتائج، مع زر «مسح الكل».</li>
+<li><strong>رتّب الفلاتر حسب الأهمية:</strong> في متجر إلكترونيات البراند أولًا، وفي متجر ملابس المقاس أولًا.</li>
+<li><strong>أغلق المجموعات الطويلة:</strong> أظهر 5 اختيارات، ثم «عرض المزيد».</li>
+<li><strong>لا تحذف الفلتر بعد التطبيق:</strong> العميل يجب أن يرى ما اختاره، ويعدّله بسهولة.</li>
+</ul>
+<p><strong>على أرض الواقع:</strong> في سلة، توجد إعدادات لتصفية وفلترة المنتجات يضبطها التاجر من لوحة التحكم (<a href="https://help.salla.sa/article/%D8%AA%D8%B5%D9%81%D9%8A%D8%A9-%D9%88%D9%81%D9%84%D8%AA%D8%B1%D8%A9-%D8%A7%D9%84%D9%85%D9%86%D8%AA%D8%AC%D8%A7%D8%AA/fj9xwn0a8ear6hegg2mm5qyy" target="_blank" rel="noopener">مركز مساعدة سلة</a>). قبل أن تصمم فلترًا، تأكد مع التاجر والمطور أن بياناته موجودة فعلًا؛ فلتر «المقاس» لا قيمة له إذا لم يُدخل التاجر المقاسات كخيارات للمنتج.</p>
+<h2 id="الترتيب-sort">الترتيب (Sort)</h2>
+<p>الترتيب يجيب عن سؤال مختلف عن الفلتر: الفلتر يقول «أرني هذا فقط»، والترتيب يقول «أرني الأهم أولًا». في ثيمات سلة، خيارات الترتيب المتاحة في صفحة القائمة هي: اقتراحنا، والأكثر مبيعًا، والأعلى تقييمًا، والسعر من الأعلى للأقل، والسعر من الأقل للأعلى (<a href="https://docs.salla.dev/422559m0" target="_blank" rel="noopener">Salla Docs</a>).</p>
+<ul>
+<li>اجعل الترتيب قائمة منسدلة صغيرة بجانب عدد النتائج على الديسكتوب.</li>
+<li>على الموبايل، اجعله زرًا بجانب زر الفلتر يفتح Bottom Sheet.</li>
+<li>أظهر الترتيب الحالي دائمًا في الزر نفسه، مثل «الترتيب: الأكثر مبيعًا».</li>
+</ul>
+<h2 id="شبكة-المنتجات">شبكة المنتجات</h2>
+<ul>
+<li><strong>عدد الأعمدة:</strong> غالبًا 4 على الديسكتوب العريض، و3 مع وجود الفلاتر الجانبية، و2 على الموبايل.</li>
+<li><strong>نسب الصور:</strong> اختر نسبة واحدة للكارت، واجعل الصورة تتكيف داخلها. التاجر سيرفع صورًا بنسب مختلفة، والشبكة يجب ألا تنكسر.</li>
+<li><strong>الاسم الكامل:</strong> في الثيمات المنشورة على متجر ثيمات سلة، اسم المنتج يظهر كاملًا. صمّم الكارت ليرتفع بشكل متناسق مع الأسماء الطويلة.</li>
+<li><strong>تبديل طريقة العرض (Grid / List):</strong> مفيد في المتاجر التقنية التي يحتاج فيها العميل إلى مواصفات أكثر، وغير ضروري في أغلب المتاجر الأخرى.</li>
+</ul>
+<h2 id="pagination-أم-عرض-المزيد-أم-التمرير-اللانهائي">Pagination أم «عرض المزيد» أم التمرير اللانهائي؟</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>الطريقة</th>
+<th>متى تناسب</th>
+<th>ماذا تخسر</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pagination بأرقام</td>
+<td>المتاجر الكبيرة، والعميل الذي يريد أن يعرف أين توقف</td>
+<td>ضغطة إضافية لكل صفحة</td>
+</tr>
+<tr>
+<td>زر «عرض المزيد»</td>
+<td>أغلب المتاجر؛ توازن بين الاستكشاف والتحكم</td>
+<td>يجب حفظ مكان العميل عند الرجوع للخلف</td>
+</tr>
+<tr>
+<td>تمرير لانهائي</td>
+<td>المحتوى البصري والتصفح العشوائي</td>
+<td>الوصول للفوتر شبه مستحيل، والعميل يفقد مكانه</td>
+</tr>
+</tbody>
+</table></div>
+<figure><a class="zoom" href="assets/02-product-listing/03-pagination.webp"><img src="assets/02-product-listing/03-pagination.webp" alt="ثلاث طرق للتنقل بين نتائج المنتجات" loading="lazy" decoding="async"></a><figcaption>صورة 3: ثلاث طرق للتنقل بين النتائج، ومتى تستخدم كل طريقة.</figcaption></figure>
+<p><strong>نصيحتي:</strong> «عرض المزيد» مع نص صغير مثل «عرضت 24 من 120 منتجًا» هو الخيار الأكثر أمانًا لأغلب متاجر سلة وزد.</p>
+<h2 id="الموبايل-الفلاتر-في-bottom-sheet">الموبايل: الفلاتر في Bottom Sheet</h2>
+<p>على الموبايل لا توجد مساحة لعمود جانبي. الحل المعتاد:</p>
+<ol>
+<li><strong>شريط ثابت (Sticky)</strong> أعلى النتائج فيه زرّان: «فلترة» و«ترتيب».</li>
+<li><strong>Bottom Sheet للفلاتر</strong> يغطي أغلب الشاشة، بمجموعات قابلة للطي.</li>
+<li><strong>زر تطبيق ثابت</strong> أسفل الشاشة يعرض عدد النتائج، مثل «عرض 32 منتجًا».</li>
+<li><strong>رقم على زر الفلترة</strong> يوضح عدد الفلاتر المطبّقة.</li>
+</ol>
+<figure><a class="zoom" href="assets/02-product-listing/04-mobile-filters.webp"><img src="assets/02-product-listing/04-mobile-filters.webp" alt="الفلاتر والترتيب على الموبايل" loading="lazy" decoding="async"></a><figcaption>صورة 4: شريط الأدوات الثابت، وBottom Sheet للفلاتر، وقائمة الترتيب على الموبايل.</figcaption></figure>
+<h2 id="الحالات-الفارغة-لا-تترك-العميل-أمام-صفحة-بيضاء">الحالات الفارغة: لا تترك العميل أمام صفحة بيضاء</h2>
+<p>متطلبات مراجعة ثيمات سلة تطلب رسالة واضحة عندما لا يحتوي القسم على منتجات، وعندما لا توجد نتائج بحث (<a href="https://docs.salla.dev/421887m0" target="_blank" rel="noopener">Salla Docs</a>). لكن الرسالة وحدها لا تكفي؛ أعطِ العميل خطوة تالية:</p>
+<ul>
+<li><strong>قسم فارغ:</strong> «لا توجد منتجات في هذا القسم حاليًا» + روابط لأقسام قريبة.</li>
+<li><strong>فلاتر بلا نتائج:</strong> «لا توجد منتجات تطابق اختياراتك» + زر «مسح الفلاتر» + اقتراح بإزالة آخر فلتر.</li>
+<li><strong>بحث بلا نتائج:</strong> اعرض ما كتبه العميل، واقترح تصحيحًا أو كلمات قريبة، واعرض الأكثر مبيعًا.</li>
+</ul>
+<figure><a class="zoom" href="assets/02-product-listing/05-empty-states.webp"><img src="assets/02-product-listing/05-empty-states.webp" alt="ثلاث حالات فارغة وكيف تصممها" loading="lazy" decoding="async"></a><figcaption>صورة 5: ثلاث حالات فارغة، ولكل حالة خطوة تالية واضحة.</figcaption></figure>
+<p><strong>نتائج البحث ليست منتجات فقط:</strong> متطلبات سلة تشير إلى أن صفحة البحث تعرض أنواعًا مختلفة من النتائج، مثل المنتجات والمقالات والصفحات (<a href="https://docs.salla.dev/421887m0" target="_blank" rel="noopener">Salla Docs</a>). صمّم لكل نوع شكلًا يميزه.</p>
+<h2 id="قائمة-مراجعة-قبل-تسليم-صفحة-القائمة">قائمة مراجعة قبل تسليم صفحة القائمة</h2>
+<ul class="checklist">
+<li class="task"><label><input type="checkbox"><span>أول صف من المنتجات ظاهر من أول نظرة على الموبايل.</span></label></li>
+<li class="task"><label><input type="checkbox"><span>رأس القسم يتحمل غياب الصورة والوصف.</span></label></li>
+<li class="task"><label><input type="checkbox"><span>الأقسام الفرعية ظاهرة كطريق مختصر قبل الفلاتر.</span></label></li>
+<li class="task"><label><input type="checkbox"><span>كل فلتر مرتبط ببيانات موجودة فعلًا في المتجر.</span></label></li>
+<li class="task"><label><input type="checkbox"><span>عدد النتائج ظاهر بجانب كل اختيار، والفلاتر المطبّقة ظاهرة مع «مسح الكل».</span></label></li>
+<li class="task"><label><input type="checkbox"><span>الترتيب الحالي مكتوب في زر الترتيب.</span></label></li>
+<li class="task"><label><input type="checkbox"><span>الشبكة لا تنكسر مع صور بنسب مختلفة وأسماء طويلة.</span></label></li>
+<li class="task"><label><input type="checkbox"><span>طريقة التنقل بين النتائج محددة، ومكان العميل محفوظ عند الرجوع.</span></label></li>
+<li class="task"><label><input type="checkbox"><span>الفلاتر على الموبايل في Bottom Sheet بزر تطبيق يعرض عدد النتائج.</span></label></li>
+<li class="task"><label><input type="checkbox"><span>الحالات الفارغة الثلاث مصممة، ولكل حالة خطوة تالية.</span></label></li>
+</ul>
+<h2 id="المصادر">المصادر</h2>
+<ul>
+<li><a href="https://docs.salla.dev/422559m0" target="_blank" rel="noopener">Salla Docs: Products Listing</a></li>
+<li><a href="https://docs.salla.dev/421887m0" target="_blank" rel="noopener">Salla Docs: UI / UX Review</a></li>
+<li><a href="https://help.salla.sa/article/%D8%AA%D8%B5%D9%81%D9%8A%D8%A9-%D9%88%D9%81%D9%84%D8%AA%D8%B1%D8%A9-%D8%A7%D9%84%D9%85%D9%86%D8%AA%D8%AC%D8%A7%D8%AA/fj9xwn0a8ear6hegg2mm5qyy" target="_blank" rel="noopener">مركز مساعدة سلة: تصفية وفلترة المنتجات</a></li>
+<li><a href="https://docs.zid.sa/overview-1379323m0" target="_blank" rel="noopener">Zid Docs: Templates Overview</a></li>
+</ul>
+    <nav class="pager" aria-label="التنقل بين المقالات"><a class="pg prev" href="01-homepage.html"><span class="pg-dir"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg> المقال السابق</span><span class="pg-title">01 — الصفحة الرئيسية</span></a><a class="pg next" href="03-product-page.html"><span class="pg-dir">المقال التالي <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></span><span class="pg-title">03 — صفحة المنتج</span></a></nav>
+  </article>
+</main>
+<footer class="site-foot"><div class="wrap foot-in">
+  <div><div class="foot-name">أسامة عبد الناصر</div><div class="foot-role">مصمم منتجات رقمية UX/UI</div></div>
+  <nav class="foot-links"><a href="https://osama-abdelnaser.com" target="_blank" rel="noopener">الموقع الشخصي</a><a href="https://www.behance.net/osamaabdelnaser1" target="_blank" rel="noopener">Behance</a><a href="https://www.linkedin.com/in/osama-abdelnaser" target="_blank" rel="noopener">LinkedIn</a><a href="https://github.com/OSA98/salla-zid-ecommerce-design" target="_blank" rel="noopener">GitHub</a></nav>
+  <div class="foot-copy">© أسامة عبد الناصر. المحتوى متاح للتعلم والمشاركة مع ذكر المصدر.</div>
+</div></footer>
+<div class="lightbox" hidden><button class="lb-close" aria-label="إغلاق">×</button><img alt=""></div>
+<script src="assets/site.js"></script>
+</body>
+</html>

@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>صفحة المنتج · تصميم المتاجر على سلة وزد</title>
+<meta name="description" content="المعرض، السعر، الخيارات وحالاتها، زر الإضافة، الثقة، والموبايل">
+<meta name="author" content="أسامة عبد الناصر">
+<link rel="canonical" href="https://osa98.github.io/salla-zid-ecommerce-design/03-product-page.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="صفحة المنتج · تصميم المتاجر على سلة وزد">
+<meta property="og:description" content="المعرض، السعر، الخيارات وحالاتها، زر الإضافة، الثقة، والموبايل">
+<meta property="og:url" content="https://osa98.github.io/salla-zid-ecommerce-design/03-product-page.html">
+<meta property="og:image" content="https://osa98.github.io/salla-zid-ecommerce-design/assets/og.png">
+<meta property="og:locale" content="ar_AR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#12201C">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div class="progress" aria-hidden="true"><span></span></div>
+<header class="topbar"><div class="wrap topbar-in">
+  <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"></span><span>تصميم المتاجر على سلة وزد</span></a>
+  <button class="menu-btn" aria-label="القائمة" aria-expanded="false"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+  <nav class="nav" aria-label="المقالات"><a href="01-homepage.html" class=""><b>01</b>الصفحة الرئيسية</a><a href="02-product-listing.html" class=""><b>02</b>قائمة المنتجات</a><a href="03-product-page.html" class="on"><b>03</b>صفحة المنتج</a><a href="04-cart-checkout.html" class=""><b>04</b>السلة والطلب</a><a href="05-design-system-handoff.html" class=""><b>05</b>Design System</a><a href="notes.html" class="">ملاحظات مهمة</a><a class="gh" href="https://github.com/OSA98/salla-zid-ecommerce-design" target="_blank" rel="noopener" aria-label="الريبو على GitHub"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-4 1.5-4-2-6-2.5M15 21v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.3 4.3 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12 12 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.3 4.3 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg><span>GitHub</span></a></nav>
+</div></header>
+
+<main class="wrap article-layout">
+  <aside class="toc" aria-label="محتوى المقال"><div class="toc-title">في هذا المقال</div><ol><li><a href="#صفحة-القرار">صفحة القرار</a></li><li><a href="#تشريح-الصفحة">تشريح الصفحة</a></li><li><a href="#معرض-الصور-المنتج-قبل-أي-كلام">معرض الصور: المنتج قبل أي كلام</a></li><li><a href="#الاسم-والسعر-وضوح-بدون-ذكاء-زائد">الاسم والسعر: وضوح بدون ذكاء زائد</a></li><li><a href="#الخيارات-variants-أصعب-جزء-في-الصفحة">الخيارات (Variants): أصعب جزء في الصفحة</a></li><li><a href="#زر-الإضافة-ومعلومات-الثقة">زر الإضافة ومعلومات الثقة</a></li><li><a href="#ما-تحت-الطية-الوصف-والتقييمات-والمنتجات-المشابهة">ما تحت الطيّة: الوصف والتقييمات والمنتجات المشابهة</a></li><li><a href="#الموبايل-الزر-يجب-أن-يبقى-قريبا">الموبايل: الزر يجب أن يبقى قريبًا</a></li><li><a href="#قائمة-مراجعة-قبل-تسليم-صفحة-المنتج">قائمة مراجعة قبل تسليم صفحة المنتج</a></li><li><a href="#المصادر">المصادر</a></li></ol>
+    <div class="toc-extra"><a href="https://github.com/OSA98/salla-zid-ecommerce-design/tree/main/articles/03-product-page" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-4 1.5-4-2-6-2.5M15 21v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.3 4.3 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12 12 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.3 4.3 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg> المقال على GitHub</a><a href="https://github.com/OSA98/salla-zid-ecommerce-design/raw/main/notion/03-product-page.zip"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg> نسخة Notion</a></div></aside>
+  <article class="prose">
+    <nav class="crumbs"><a href="index.html">السلسلة</a><span>/</span><span>المقال 03 من 5</span></nav>
+    <header class="article-head"><span class="kicker">المقال 03</span><h1>صفحة المنتج</h1>
+      <p class="meta"><span>بقلم أسامة عبد الناصر</span><span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> قراءة 5 دقائق</span><span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 17l-5-5-9 8"/></svg> 5 صور توضيحية</span></p></header>
+    <details class="toc-mobile"><summary>في هذا المقال</summary><ol><li><a href="#صفحة-القرار">صفحة القرار</a></li><li><a href="#تشريح-الصفحة">تشريح الصفحة</a></li><li><a href="#معرض-الصور-المنتج-قبل-أي-كلام">معرض الصور: المنتج قبل أي كلام</a></li><li><a href="#الاسم-والسعر-وضوح-بدون-ذكاء-زائد">الاسم والسعر: وضوح بدون ذكاء زائد</a></li><li><a href="#الخيارات-variants-أصعب-جزء-في-الصفحة">الخيارات (Variants): أصعب جزء في الصفحة</a></li><li><a href="#زر-الإضافة-ومعلومات-الثقة">زر الإضافة ومعلومات الثقة</a></li><li><a href="#ما-تحت-الطية-الوصف-والتقييمات-والمنتجات-المشابهة">ما تحت الطيّة: الوصف والتقييمات والمنتجات المشابهة</a></li><li><a href="#الموبايل-الزر-يجب-أن-يبقى-قريبا">الموبايل: الزر يجب أن يبقى قريبًا</a></li><li><a href="#قائمة-مراجعة-قبل-تسليم-صفحة-المنتج">قائمة مراجعة قبل تسليم صفحة المنتج</a></li><li><a href="#المصادر">المصادر</a></li></ol></details>
+    <blockquote>
+<p><strong>ملاحظة مهمة قبل التصميم:</strong> متطلبات مراجعة ثيمات سلة لصفحة المنتج تفصيلية جدًا: عنوان كامل، وصور لا تكسر التصميم مهما اختلفت نسبها، وتغيّر الصورة والسعر وحالة التوفر عند اختيار خيار مختلف، وزر إضافة يتعطل أو يتغير عند نفاد الخيار، ومؤشر «شامل الضريبة» عند الحاجة (<a href="https://docs.salla.dev/421887m0" target="_blank" rel="noopener">Salla Docs</a>). صمّم كل هذه الحالات، وليس الحالة المثالية فقط. التفاصيل في ملف <a href="notes.html">ملاحظات وتحديثات مهمة</a>.</p>
+</blockquote>
+<hr />
+<h2 id="صفحة-القرار">صفحة القرار</h2>
+<p>كل ما قبل صفحة المنتج هدفه أن يوصّل العميل إليها. وهنا يقرر: أشتري أم لا؟ لذلك تصميم الصفحة يجيب عن أسئلة العميل بالترتيب الذي يسألها به:</p>
+<ol>
+<li><strong>ما هذا؟</strong> الصور والاسم.</li>
+<li><strong>بكم؟</strong> السعر، والخصم، وهل يشمل الضريبة.</li>
+<li><strong>هل يناسبني؟</strong> الخيارات، والمقاسات، والوصف.</li>
+<li><strong>هل أثق فيه؟</strong> التقييمات، والضمان، والاسترجاع.</li>
+<li><strong>كيف أحصل عليه؟</strong> زر الإضافة، والشحن، ومدة التوصيل.</li>
+</ol>
+<h2 id="تشريح-الصفحة">تشريح الصفحة</h2>
+<figure><a class="zoom" href="assets/03-product-page/01-pdp-anatomy.webp"><img src="assets/03-product-page/01-pdp-anatomy.webp" alt="تشريح صفحة المنتج على الديسكتوب" loading="lazy" decoding="async"></a><figcaption>صورة 1: تشريح صفحة المنتج على الديسكتوب، والصور على اليمين كما في المتاجر العربية.</figcaption></figure>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>#</th>
+<th>العنصر</th>
+<th>ما يجب أن يحققه</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>معرض الصور</td>
+<td>كل الصور، بدون كسر التصميم مع اختلاف النسب</td>
+</tr>
+<tr>
+<td>2</td>
+<td>الاسم والتقييم</td>
+<td>الاسم كاملًا، ورابط سريع للتقييمات</td>
+</tr>
+<tr>
+<td>3</td>
+<td>السعر</td>
+<td>السعر الحالي، والسعر قبل الخصم، ومؤشر شمول الضريبة</td>
+</tr>
+<tr>
+<td>4</td>
+<td>الخيارات</td>
+<td>اختيار واضح، وحالة لكل خيار غير متوفر</td>
+</tr>
+<tr>
+<td>5</td>
+<td>الكمية والإضافة</td>
+<td>زر أساسي واضح، وزر شراء مباشر عند الحاجة</td>
+</tr>
+<tr>
+<td>6</td>
+<td>معلومات الثقة</td>
+<td>الشحن، والاسترجاع، وطرق الدفع</td>
+</tr>
+<tr>
+<td>7</td>
+<td>المشاركة</td>
+<td>رابط مباشر وواتساب ومنصات التواصل</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="معرض-الصور-المنتج-قبل-أي-كلام">معرض الصور: المنتج قبل أي كلام</h2>
+<p>العميل لا يستطيع لمس المنتج، فالصور تعوّض ذلك. متطلبات مراجعة ثيمات سلة تطلب عرض كل صور المنتج دون كسر التصميم مع اختلاف النسب، وتغيير الصورة عند اختيار خيار مختلف، ودعم الفيديو والنماذج ثلاثية الأبعاد (<a href="https://docs.salla.dev/421887m0" target="_blank" rel="noopener">Salla Docs</a>).</p>
+<ul>
+<li><strong>الصورة الرئيسية كبيرة،</strong> والصور المصغرة بجانبها أو أسفلها.</li>
+<li><strong>التكبير (Zoom):</strong> عند الـ Hover على الديسكتوب، وبالضغط على الموبايل.</li>
+<li><strong>الفيديو:</strong> صورة مصغرة بعلامة تشغيل، وليس أول ما يظهر دائمًا.</li>
+<li><strong>ربط الصور بالخيارات:</strong> عندما يختار العميل «نحاسي»، تظهر صورة المنتج النحاسي.</li>
+<li><strong>على الموبايل:</strong> سحب أفقي (Swipe) مع نقاط أو عدّاد مثل «2 / 6».</li>
+</ul>
+<figure><a class="zoom" href="assets/03-product-page/02-gallery.webp"><img src="assets/03-product-page/02-gallery.webp" alt="أشكال معرض الصور" loading="lazy" decoding="async"></a><figcaption>صورة 2: ثلاثة أشكال لمعرض الصور، وربط الصورة بالخيار المختار.</figcaption></figure>
+<h2 id="الاسم-والسعر-وضوح-بدون-ذكاء-زائد">الاسم والسعر: وضوح بدون ذكاء زائد</h2>
+<ul>
+<li><strong>الاسم كاملًا</strong> كما يكتبه التاجر، بدون اختصار.</li>
+<li><strong>السعر هو أكبر رقم في الصفحة.</strong> السعر قبل الخصم أصغر ومشطوب، ونسبة الخصم أو قيمة التوفير بجانبه.</li>
+<li><strong>شمول الضريبة:</strong> إذا كانت أسعار المتجر شاملة للضريبة، أضف سطرًا صغيرًا يوضح ذلك. هذا من متطلبات مراجعة ثيمات سلة (<a href="https://docs.salla.dev/421887m0" target="_blank" rel="noopener">Salla Docs</a>).</li>
+<li><strong>التقسيط:</strong> إن كان المتجر يقدمه، سطر صغير تحت السعر يكفي. لا تجعله ينافس السعر نفسه.</li>
+</ul>
+<h2 id="الخيارات-variants-أصعب-جزء-في-الصفحة">الخيارات (Variants): أصعب جزء في الصفحة</h2>
+<p>هنا تقع أغلب الأخطاء. العميل يختار لونًا ومقاسًا وسعة، وكل اختيار قد يغيّر السعر والصورة والتوفر. متطلبات سلة واضحة في هذه النقطة: تحميل أول خيار متوفر عند فتح الصفحة، وتحديث السعر وحالة النفاد حسب الخيار المختار، وتعطيل زر الإضافة أو تغييره عند اختيار خيار غير متوفر (<a href="https://docs.salla.dev/421887m0" target="_blank" rel="noopener">Salla Docs</a>).</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>نوع الخيار</th>
+<th>الشكل المناسب</th>
+<th>ملاحظة</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>اللون</td>
+<td>دوائر ألوان، مع اسم اللون المختار مكتوبًا</td>
+<td>الاسم مهم لمن يصعب عليه تمييز الألوان</td>
+</tr>
+<tr>
+<td>المقاس أو السعة</td>
+<td>Chips</td>
+<td>أضف رابط «دليل المقاسات» بجانبها</td>
+</tr>
+<tr>
+<td>خيارات كثيرة جدًا</td>
+<td>قائمة منسدلة</td>
+<td>فقط عندما تزيد الاختيارات عن مساحة الـ Chips</td>
+</tr>
+<tr>
+<td>نص يكتبه العميل</td>
+<td>حقل نص</td>
+<td>مثل نقش اسم على المنتج</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="حالات-كل-خيار">حالات كل خيار</h3>
+<p>صمّم لكل خيار أربع حالات على الأقل: <strong>عادي، ومختار، وغير متوفر، ومُعطّل في هذه التركيبة</strong>. الخيار غير المتوفر يبقى ظاهرًا بخط مشطوب أو لون باهت، ولا يُحذف؛ العميل يحتاج أن يعرف أن المقاس موجود لكنه نفد.</p>
+<figure><a class="zoom" href="assets/03-product-page/03-variants.webp"><img src="assets/03-product-page/03-variants.webp" alt="الخيارات وحالاتها" loading="lazy" decoding="async"></a><figcaption>صورة 3: أشكال الخيارات، وحالاتها الأربع، وكيف يتغير زر الإضافة مع خيار غير متوفر.</figcaption></figure>
+<h2 id="زر-الإضافة-ومعلومات-الثقة">زر الإضافة ومعلومات الثقة</h2>
+<ul>
+<li><strong>زر «أضف للسلة»</strong> هو الأبرز في الصفحة بعد السعر.</li>
+<li><strong>زر «اشترِ الآن»</strong> للانتقال المباشر للدفع. متطلبات سلة تطلب أزرار الدفع المباشر مفعّلة افتراضيًا (<a href="https://docs.salla.dev/421887m0" target="_blank" rel="noopener">Salla Docs</a>).</li>
+<li><strong>الكمية:</strong> بجانب الزر، بأزرار + و−.</li>
+<li><strong>معلومات الثقة أسفل الزر مباشرة:</strong> مدة التوصيل، وسياسة الاسترجاع، وطرق الدفع. هذا هو المكان الذي يتردد فيه العميل، فأجب عن تردده هنا.</li>
+</ul>
+<h2 id="ما-تحت-الطية-الوصف-والتقييمات-والمنتجات-المشابهة">ما تحت الطيّة: الوصف والتقييمات والمنتجات المشابهة</h2>
+<p>بعد الجزء العلوي، العميل الذي ما زال مترددًا يبحث عن تفاصيل أكثر:</p>
+<ol>
+<li><strong>الوصف:</strong> فقرات قصيرة ونقاط، وليس جدارًا من النص.</li>
+<li><strong>المواصفات:</strong> جدول بسيط من عمودين.</li>
+<li><strong>طريقة الاستخدام أو العناية:</strong> عند الحاجة.</li>
+<li><strong>التقييمات والأسئلة:</strong> متوسط التقييم، وتوزيع النجوم، والآراء مع صور العملاء. في زد توجد قوالب مستقلة لتقييمات المنتج وأسئلته (<a href="https://docs.zid.sa/overview-1379323m0" target="_blank" rel="noopener">Zid Docs</a>).</li>
+<li><strong>منتجات مشابهة أو تكمل المنتج:</strong> «يُشترى معه عادة» أقوى من «قد يعجبك».</li>
+</ol>
+<p><strong>Tabs أم Accordion؟</strong> على الديسكتوب يمكن استخدام Tabs للوصف والمواصفات والتقييمات. على الموبايل، Accordion أفضل؛ لأن العميل يمرر لأسفل بطبيعته.</p>
+<figure><a class="zoom" href="assets/03-product-page/04-below-fold.webp"><img src="assets/03-product-page/04-below-fold.webp" alt="ما تحت الطيّة في صفحة المنتج" loading="lazy" decoding="async"></a><figcaption>صورة 4: ترتيب ما تحت الطيّة: الوصف والمواصفات والتقييمات والمنتجات المشابهة.</figcaption></figure>
+<h2 id="الموبايل-الزر-يجب-أن-يبقى-قريبا">الموبايل: الزر يجب أن يبقى قريبًا</h2>
+<p>على الموبايل، المعرض يأخذ عرض الشاشة كاملًا، والمعلومات تأتي تحته. أهم قرار هنا: <strong>شريط إضافة ثابت (Sticky Add to Cart)</strong> يظهر أسفل الشاشة عندما يمرر العميل بعد الزر الأصلي، ويحمل السعر وزر الإضافة.</p>
+<figure><a class="zoom" href="assets/03-product-page/05-mobile-pdp.webp"><img src="assets/03-product-page/05-mobile-pdp.webp" alt="صفحة المنتج على الموبايل" loading="lazy" decoding="async"></a><figcaption>صورة 5: صفحة المنتج على الموبايل، والشريط الثابت، وAccordion للتفاصيل.</figcaption></figure>
+<h2 id="قائمة-مراجعة-قبل-تسليم-صفحة-المنتج">قائمة مراجعة قبل تسليم صفحة المنتج</h2>
+<ul class="checklist">
+<li class="task"><label><input type="checkbox"><span>المعرض مُختبر مع صورة واحدة، ومع 8 صور، ومع صور بنسب مختلفة.</span></label></li>
+<li class="task"><label><input type="checkbox"><span>الصورة تتغير عند اختيار خيار له صورة خاصة.</span></label></li>
+<li class="task"><label><input type="checkbox"><span>الاسم يظهر كاملًا، والسعر أكبر رقم في الصفحة.</span></label></li>
+<li class="task"><label><input type="checkbox"><span>مؤشر «شامل الضريبة» مصمم عند الحاجة.</span></label></li>
+<li class="task"><label><input type="checkbox"><span>كل خيار له حالات: عادي، ومختار، وغير متوفر.</span></label></li>
+<li class="task"><label><input type="checkbox"><span>زر الإضافة له حالة عند نفاد التركيبة المختارة.</span></label></li>
+<li class="task"><label><input type="checkbox"><span>السعر وحالة التوفر يتحدثان مع تغيير الخيار.</span></label></li>
+<li class="task"><label><input type="checkbox"><span>معلومات الشحن والاسترجاع أسفل الزر مباشرة.</span></label></li>
+<li class="task"><label><input type="checkbox"><span>التقييمات لها حالة فارغة («كن أول من يقيّم»).</span></label></li>
+<li class="task"><label><input type="checkbox"><span>شريط الإضافة الثابت مصمم للموبايل.</span></label></li>
+<li class="task"><label><input type="checkbox"><span>المشاركة متاحة: رابط مباشر وواتساب.</span></label></li>
+</ul>
+<h2 id="المصادر">المصادر</h2>
+<ul>
+<li><a href="https://docs.salla.dev/421887m0" target="_blank" rel="noopener">Salla Docs: UI / UX Review</a></li>
+<li><a href="https://docs.zid.sa/overview-1379323m0" target="_blank" rel="noopener">Zid Docs: Templates Overview</a></li>
+</ul>
+    <nav class="pager" aria-label="التنقل بين المقالات"><a class="pg prev" href="02-product-listing.html"><span class="pg-dir"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg> المقال السابق</span><span class="pg-title">02 — صفحة قائمة المنتجات والفلترة</span></a><a class="pg next" href="04-cart-checkout.html"><span class="pg-dir">المقال التالي <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></span><span class="pg-title">04 — السلة وإتمام الطلب</span></a></nav>
+  </article>
+</main>
+<footer class="site-foot"><div class="wrap foot-in">
+  <div><div class="foot-name">أسامة عبد الناصر</div><div class="foot-role">مصمم منتجات رقمية UX/UI</div></div>
+  <nav class="foot-links"><a href="https://osama-abdelnaser.com" target="_blank" rel="noopener">الموقع الشخصي</a><a href="https://www.behance.net/osamaabdelnaser1" target="_blank" rel="noopener">Behance</a><a href="https://www.linkedin.com/in/osama-abdelnaser" target="_blank" rel="noopener">LinkedIn</a><a href="https://github.com/OSA98/salla-zid-ecommerce-design" target="_blank" rel="noopener">GitHub</a></nav>
+  <div class="foot-copy">© أسامة عبد الناصر. المحتوى متاح للتعلم والمشاركة مع ذكر المصدر.</div>
+</div></footer>
+<div class="lightbox" hidden><button class="lb-close" aria-label="إغلاق">×</button><img alt=""></div>
+<script src="assets/site.js"></script>
+</body>
+</html>

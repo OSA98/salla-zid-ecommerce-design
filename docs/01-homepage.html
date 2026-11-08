@@ -1,0 +1,450 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>تصميم الصفحة الرئيسية لمتجر على سلة وزد · تصميم المتاجر على سلة وزد</title>
+<meta name="description" content="Hero، الأقسام، البانرات، الـ Product Card، أقسام الثقة، الفوتر، وحدود المنصة">
+<meta name="author" content="أسامة عبد الناصر">
+<link rel="canonical" href="https://osa98.github.io/salla-zid-ecommerce-design/01-homepage.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="تصميم الصفحة الرئيسية لمتجر على سلة وزد · تصميم المتاجر على سلة وزد">
+<meta property="og:description" content="Hero، الأقسام، البانرات، الـ Product Card، أقسام الثقة، الفوتر، وحدود المنصة">
+<meta property="og:url" content="https://osa98.github.io/salla-zid-ecommerce-design/01-homepage.html">
+<meta property="og:image" content="https://osa98.github.io/salla-zid-ecommerce-design/assets/og.png">
+<meta property="og:locale" content="ar_AR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#12201C">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div class="progress" aria-hidden="true"><span></span></div>
+<header class="topbar"><div class="wrap topbar-in">
+  <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"></span><span>تصميم المتاجر على سلة وزد</span></a>
+  <button class="menu-btn" aria-label="القائمة" aria-expanded="false"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+  <nav class="nav" aria-label="المقالات"><a href="01-homepage.html" class="on"><b>01</b>الصفحة الرئيسية</a><a href="02-product-listing.html" class=""><b>02</b>قائمة المنتجات</a><a href="03-product-page.html" class=""><b>03</b>صفحة المنتج</a><a href="04-cart-checkout.html" class=""><b>04</b>السلة والطلب</a><a href="05-design-system-handoff.html" class=""><b>05</b>Design System</a><a href="notes.html" class="">ملاحظات مهمة</a><a class="gh" href="https://github.com/OSA98/salla-zid-ecommerce-design" target="_blank" rel="noopener" aria-label="الريبو على GitHub"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-4 1.5-4-2-6-2.5M15 21v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.3 4.3 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12 12 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.3 4.3 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg><span>GitHub</span></a></nav>
+</div></header>
+
+<main class="wrap article-layout">
+  <aside class="toc" aria-label="محتوى المقال"><div class="toc-title">في هذا المقال</div><ol><li><a href="#مقدمة-لماذا-هذه-السلسلة">مقدمة: لماذا هذه السلسلة؟</a></li><li><a href="#الصورة-الكاملة-تشريح-الصفحة-الرئيسية">الصورة الكاملة: تشريح الصفحة الرئيسية</a></li><li><a href="#الـ-hero-section-الانطباع-الأول">الـ Hero Section: الانطباع الأول</a></li><li><a href="#الأقسام-الرئيسية-والفرعية">الأقسام الرئيسية والفرعية</a></li><li><a href="#العلامات-التجارية-brands">العلامات التجارية (Brands)</a></li><li><a href="#البانرات-والأقسام-الترويجية">البانرات والأقسام الترويجية</a></li><li><a href="#قسم-المنتجات-والفلترة">قسم المنتجات والفلترة</a></li><li><a href="#الـ-product-card-أهم-component-في-المتجر">الـ Product Card: أهم Component في المتجر</a></li><li><a href="#أقسام-الثقة-لماذا-أشتري-من-هنا">أقسام الثقة: لماذا أشتري من هنا؟</a></li><li><a href="#الفوتر-footer">الفوتر (Footer)</a></li><li><a href="#لا-يوجد-layout-واحد-صحيح">لا يوجد Layout واحد صحيح</a></li><li><a href="#سلة-وزد-صمم-وأنت-فاهم-المنصة">سلة وزد: صمّم وأنت فاهم المنصة</a></li><li><a href="#ما-وراء-الأقسام-الصور-والأيقونات-والخطوط">ما وراء الأقسام: الصور والأيقونات والخطوط</a></li><li><a href="#كل-براند-له-قصة">كل براند له قصة</a></li><li><a href="#الخلاصة-التجربة-أكبر-من-الواجهة">الخلاصة: التجربة أكبر من الواجهة</a></li><li><a href="#قائمة-مراجعة-قبل-تسليم-الصفحة-الرئيسية">قائمة مراجعة قبل تسليم الصفحة الرئيسية</a></li><li><a href="#المصادر">المصادر</a></li></ol>
+    <div class="toc-extra"><a href="https://github.com/OSA98/salla-zid-ecommerce-design/tree/main/articles/01-homepage" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-4 1.5-4-2-6-2.5M15 21v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.3 4.3 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12 12 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.3 4.3 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg> المقال على GitHub</a><a href="https://github.com/OSA98/salla-zid-ecommerce-design/raw/main/notion/01-homepage.zip"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg> نسخة Notion</a></div></aside>
+  <article class="prose">
+    <nav class="crumbs"><a href="index.html">السلسلة</a><span>/</span><span>المقال 01 من 5</span></nav>
+    <header class="article-head"><span class="kicker">المقال 01</span><h1>تصميم الصفحة الرئيسية لمتجر على سلة وزد</h1>
+      <p class="meta"><span>بقلم أسامة عبد الناصر</span><span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> قراءة 17 دقيقة</span><span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 17l-5-5-9 8"/></svg> 12 صورة توضيحية</span></p></header>
+    <details class="toc-mobile"><summary>في هذا المقال</summary><ol><li><a href="#مقدمة-لماذا-هذه-السلسلة">مقدمة: لماذا هذه السلسلة؟</a></li><li><a href="#الصورة-الكاملة-تشريح-الصفحة-الرئيسية">الصورة الكاملة: تشريح الصفحة الرئيسية</a></li><li><a href="#الـ-hero-section-الانطباع-الأول">الـ Hero Section: الانطباع الأول</a></li><li><a href="#الأقسام-الرئيسية-والفرعية">الأقسام الرئيسية والفرعية</a></li><li><a href="#العلامات-التجارية-brands">العلامات التجارية (Brands)</a></li><li><a href="#البانرات-والأقسام-الترويجية">البانرات والأقسام الترويجية</a></li><li><a href="#قسم-المنتجات-والفلترة">قسم المنتجات والفلترة</a></li><li><a href="#الـ-product-card-أهم-component-في-المتجر">الـ Product Card: أهم Component في المتجر</a></li><li><a href="#أقسام-الثقة-لماذا-أشتري-من-هنا">أقسام الثقة: لماذا أشتري من هنا؟</a></li><li><a href="#الفوتر-footer">الفوتر (Footer)</a></li><li><a href="#لا-يوجد-layout-واحد-صحيح">لا يوجد Layout واحد صحيح</a></li><li><a href="#سلة-وزد-صمم-وأنت-فاهم-المنصة">سلة وزد: صمّم وأنت فاهم المنصة</a></li><li><a href="#ما-وراء-الأقسام-الصور-والأيقونات-والخطوط">ما وراء الأقسام: الصور والأيقونات والخطوط</a></li><li><a href="#كل-براند-له-قصة">كل براند له قصة</a></li><li><a href="#الخلاصة-التجربة-أكبر-من-الواجهة">الخلاصة: التجربة أكبر من الواجهة</a></li><li><a href="#قائمة-مراجعة-قبل-تسليم-الصفحة-الرئيسية">قائمة مراجعة قبل تسليم الصفحة الرئيسية</a></li><li><a href="#المصادر">المصادر</a></li></ol></details>
+    <blockquote>
+<p><strong>تحديث مهم (نوفمبر 2026):</strong> سلة وزد غيّرتا طريقة بناء الثيمات مؤخرًا. وثائق سلة الحالية تقدم نظام Twilight المبني على React، وتصنّف محرك Twilight القديم المبني على Twig كـ Deprecated. وزد انتقلت إلى نظام Vitrin بقوالب Jinja، والثيمات المبنية على Twig أصبحت تحتاج إلى ترحيل. التفاصيل والمصادر في قسم «سلة وزد: صمّم وأنت فاهم المنصة»، وفي ملف <a href="notes.html">ملاحظات وتحديثات مهمة</a>.</p>
+</blockquote>
+<hr />
+<h2 id="مقدمة-لماذا-هذه-السلسلة">مقدمة: لماذا هذه السلسلة؟</h2>
+<p>يصلني سؤال واحد بشكل متكرر: <strong>كيف تصمم متجرًا إلكترونيًا على سلة أو زد؟</strong></p>
+<p>منذ أكتوبر 2024 صممت 23 ثيمًا لمتاجر سلة، و11 متجرًا حيًا لعلامات تجارية على سلة وزد وShopify. هذه السلسلة هي خلاصة ما تعلمته من هذه المشاريع، بلغة بسيطة وصور توضيحية.</p>
+<p>نبدأ بالصفحة الرئيسية (Homepage)، لأنها أول ما يراه العميل، وأكثر صفحة سيُطلب منك تصميمها.</p>
+<blockquote>
+<p><strong>ابدأ بالأساس، افهم الـ UX، ثم ابنِ عليه بحرية.</strong></p>
+</blockquote>
+<p>كل متجر له طبيعة مختلفة، وكل Brand له قصة وجمهور مختلف. لذلك لا يوجد Layout واحد تنسخه في كل مشروع. الهدف تجربة واضحة وسهلة وجذابة، تعكس شخصية الـ Brand في نفس الوقت.</p>
+<p><strong>لمن هذا المقال؟</strong> للمصمم الذي يريد أن يبدأ في تصميم المتاجر، وللمصمم الذي يصمم بالفعل ويريد أن يفهم المنصة قبل أن يصمم لها.</p>
+<p><strong>ملاحظة عن الصور:</strong> كل الصور في المقال Wireframes توضيحية رُسمت خصيصًا للشرح، والمتاجر فيها باتجاه RTL كما تظهر في المتاجر العربية.</p>
+<h2 id="الصورة-الكاملة-تشريح-الصفحة-الرئيسية">الصورة الكاملة: تشريح الصفحة الرئيسية</h2>
+<p>الصفحة الرئيسية تأخذ العميل في رحلة من أربع مراحل، وكل قسم فيها يخدم مرحلة واحدة منها. لو فهمت المراحل، ستعرف لماذا يوجد كل قسم، ومتى تحذفه أو تغيّر مكانه.</p>
+<ol>
+<li><strong>التعريف (أنا فين؟):</strong> الـ Hero Section بكل مكوناته، من شريط الإعلانات حتى الرسالة الرئيسية.</li>
+<li><strong>الاكتشاف (المتجر بيبيع إيه؟):</strong> الأقسام الرئيسية والفرعية، والعلامات التجارية، والبانرات.</li>
+<li><strong>الاختيار (أشتري إيه؟):</strong> قسم المنتجات والـ Product Card.</li>
+<li><strong>الثقة (أشتري من هنا ليه؟):</strong> من نحن والمميزات، وآراء العملاء، والأسئلة الشائعة، والمقالات.</li>
+</ol>
+<p>وفي النهاية يأتي الـ Footer كخريطة احتياطية لكل ما لم يجده العميل أثناء التصفح.</p>
+<figure><a class="zoom" href="assets/01-homepage/01-homepage-anatomy.webp"><img src="assets/01-homepage/01-homepage-anatomy.webp" alt="تشريح الصفحة الرئيسية حسب مراحل رحلة العميل" loading="lazy" decoding="async"></a><figcaption>صورة 1: تشريح الصفحة الرئيسية من أعلى لأسفل، مقسمة حسب مراحل رحلة العميل.</figcaption></figure>
+<h2 id="الـ-hero-section-الانطباع-الأول">الـ Hero Section: الانطباع الأول</h2>
+<p>الـ Hero هو أهم قسم في الصفحة وأبرزها. وظيفته ليست أن يكون جميلًا فقط، بل أن يجيب بسرعة عن خمسة أسئلة في ذهن العميل:</p>
+<ul>
+<li>أنا فين؟</li>
+<li>المتجر بيبيع إيه؟</li>
+<li>إيه أهم حاجة أقدر أعملها هنا؟</li>
+<li>إيه العرض أو القيمة اللي بيقدمها المتجر؟</li>
+<li>أوصل للمنتج اللي عايزه إزاي؟</li>
+</ul>
+<h3 id="مكونات-الـ-hero-الستة">مكونات الـ Hero الستة</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>#</th>
+<th>المكوّن</th>
+<th>ماذا يحتوي</th>
+<th>نصيحة من التجربة</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Announcement Bar</td>
+<td>عروض، خصومات، شحن مجاني، حملات موسمية، رسائل مهمة</td>
+<td>رسالة واحدة واضحة أفضل من خمس رسائل تتبدل بسرعة</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Header &amp; Primary Actions</td>
+<td>Logo، Search، Login / Account، Cart، Wishlist</td>
+<td>الـ Search والـ Cart أهم نقطتي تفاعل؛ يجب أن يظهرا دائمًا، حتى على الموبايل</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Main Navigation</td>
+<td>الأقسام الرئيسية والفرعية، Brands، Offers، New Arrivals، الصفحات المهمة</td>
+<td>الهدف أقصر طريق للمنتج، وليس أكبر عدد من الروابط</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Secondary Promotional Bar</td>
+<td>عروض منتجات، حملات، رسائل شحن مرتبطة بالأقسام</td>
+<td>اختياري؛ أضفه فقط لو يحمل رسالة مختلفة عن الشريط الأول</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Utility Bar</td>
+<td>اللغة، العملة، العروض، معلومات الشحن</td>
+<td>كل عنصر إضافي يضغط على الـ Visual Hierarchy، فاسأل: هل يحتاجه العميل هنا؟</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Main Hero Content</td>
+<td>Main Visual، Headline، Description، Primary CTA، Secondary CTA عند الحاجة</td>
+<td>العنوان يقول القيمة، والـ CTA يقول الخطوة التالية</td>
+</tr>
+</tbody>
+</table></div>
+<figure><a class="zoom" href="assets/01-homepage/02-hero-anatomy.webp"><img src="assets/01-homepage/02-hero-anatomy.webp" alt="تشريح الـ Hero ومكوناته الستة" loading="lazy" decoding="async"></a><figcaption>صورة 2: تشريح الـ Hero ومكوناته الستة في متجر عربي (RTL).</figcaption></figure>
+<p><strong>انتبه لتكدّس الأشرطة.</strong> لو استخدمت الخمسة أشرطة كلها فوق بعض، سيُدفع محتوى الـ Hero الحقيقي لأسفل، خصوصًا على الموبايل. الحل غالبًا: ادمج الـ Utility Bar داخل الـ Header، وانقل الـ Navigation إلى قائمة جانبية (Drawer) على الموبايل.</p>
+<h3 id="لا-يوجد-شكل-واحد-للـ-hero">لا يوجد شكل واحد للـ Hero</h3>
+<p>اختر الشكل حسب ما يريد المتجر أن يقوله أولًا:</p>
+<ul>
+<li><strong>صورة + نص (Split):</strong> الأكثر أمانًا؛ مناسب لأغلب المتاجر.</li>
+<li><strong>فيديو:</strong> عندما تكون الحركة أو طريقة الاستخدام جزءًا من قيمة المنتج.</li>
+<li><strong>Product-focused:</strong> عندما يبيع المتجر منتجًا بطلًا واحدًا أو عددًا قليلًا من المنتجات.</li>
+<li><strong>Campaign-focused:</strong> للحملات والمواسم مثل رمضان واليوم الوطني والجمعة البيضاء.</li>
+<li><strong>Editorial:</strong> للبراندات التي تبيع أسلوب حياة وقصة، وليس منتجًا فقط.</li>
+<li><strong>Collection-focused:</strong> عندما يريد العميل أن يرى التنوع من أول نظرة.</li>
+</ul>
+<p>المهم في كل الحالات: واضح، سريع الفهم، ومتوافق مع هوية الـ Brand.</p>
+<figure><a class="zoom" href="assets/01-homepage/03-hero-variants.webp"><img src="assets/01-homepage/03-hero-variants.webp" alt="ستة أشكال شائعة للـ Hero" loading="lazy" decoding="async"></a><figcaption>صورة 3: ستة أشكال شائعة للـ Hero، ومتى تستخدم كل شكل.</figcaption></figure>
+<h2 id="الأقسام-الرئيسية-والفرعية">الأقسام الرئيسية والفرعية</h2>
+<p>بعد الـ Hero، مهمتك أن توصّل العميل إلى القسم المناسب بأقل عدد من الضغطات. يمكنك عرض الأقسام الرئيسية وحدها، أو الجمع بين الرئيسية والفرعية في نفس المكان.</p>
+<h3 id="طرق-العرض-الشائعة">طرق العرض الشائعة</h3>
+<ul>
+<li><strong>Category Cards بالصور:</strong> مناسبة عندما تكون الأقسام بصرية، مثل الأثاث والإلكترونيات والعطور.</li>
+<li><strong>دوائر أو أيقونات في Horizontal Scroller:</strong> مناسبة للأقسام الكثيرة، وممتازة على الموبايل.</li>
+<li><strong>Grid:</strong> مناسب لعدد محدود من الأقسام الرئيسية (من 4 إلى 8 تقريبًا).</li>
+<li><strong>Tabs:</strong> عندما تكون الأقسام كثيرة؛ القسم الرئيسي في التاب، والفرعية تحته. هذا يقلل الـ Visual Clutter.</li>
+</ul>
+<p>وفي نهاية القسم، أضف CTA مثل <strong>عرض كل المنتجات</strong> لتوجيه العميل إلى صفحة المنتجات.</p>
+<figure><a class="zoom" href="assets/01-homepage/04-categories.webp"><img src="assets/01-homepage/04-categories.webp" alt="ثلاث طرق لعرض الأقسام" loading="lazy" decoding="async"></a><figcaption>صورة 4: ثلاث طرق لعرض الأقسام: بطاقات بالصور، ودوائر قابلة للتمرير، وتابات تجمع الرئيسية مع الفرعية.</figcaption></figure>
+<p><strong>صمّم للبيانات الحقيقية.</strong> في سلة وزد، التاجر هو من يضيف الأقسام من لوحة التحكم. قد تكون 3 أقسام أو 30، وقد يكون اسم القسم كلمة أو سطرين. اختبر تصميمك على الحالتين قبل التسليم.</p>
+<p><strong>وحّد صور الأقسام:</strong> نفس الأبعاد، ونفس الخلفية، ونفس أسلوب التصوير. صور غير متناسقة تجعل القسم يبدو عشوائيًا مهما كان التصميم جيدًا.</p>
+<h2 id="العلامات-التجارية-brands">العلامات التجارية (Brands)</h2>
+<p>في المتاجر متعددة العلامات، مثل الإلكترونيات والعطور وقطع الغيار، العميل كثيرًا ما يبحث بالبراند قبل المنتج. هنا يصبح قسم الـ Brands وسيلة <strong>اكتشاف وفلترة</strong>، وليس مجرد شريط شعارات للزينة.</p>
+<p>طرق العرض:</p>
+<ul>
+<li>Brand Logos في شريط أفقي أو Slider.</li>
+<li>Brand Cards بصورة وشعار.</li>
+<li>Brand Categories، أي تجميع البراندات حسب القسم.</li>
+</ul>
+<p>كل شعار يجب أن يفتح صفحة البراند بمنتجاته. ثيمات سلة مثلًا تأتي بمكوّن جاهز لعرض شعارات البراندات، وبصفحات مخصصة لقائمة البراندات وللبراند الواحد (<a href="https://docs.salla.dev/422558m0" target="_blank" rel="noopener">Salla Docs</a>).</p>
+<p><strong>نصيحة:</strong> وحّد مقاس الشعارات بصريًا، وليس رقميًا. شعار عريض وشعار مربع بنفس العرض لن يبدوا بنفس الحجم؛ ضعهما في إطار ثابت واضبط كل واحد بالعين.</p>
+<h2 id="البانرات-والأقسام-الترويجية">البانرات والأقسام الترويجية</h2>
+<p>البانر ليس مجرد صورة. هو <strong>Communication Component</strong> يربط بين ثلاثة أشياء: صورة تلفت النظر، ونص يوضح الرسالة، وزر يحدد الخطوة التالية.</p>
+<p>مكونات البانر:</p>
+<ul>
+<li><strong>Image:</strong> صورة منتج أو قسم أو أجواء الحملة.</li>
+<li><strong>Heading:</strong> الرسالة في كلمات قليلة.</li>
+<li><strong>Description:</strong> سطر يوضح التفاصيل، مثل نسبة الخصم أو مدة العرض.</li>
+<li><strong>CTA:</strong> فعل واضح، مثل «تسوّق العطور» بدلًا من «اضغط هنا».</li>
+</ul>
+<p>يمكن استخدام البانرات للترويج لقسم معين، أو مجموعة منتجات، أو New Arrivals، أو العروض، أو الحملات الموسمية، أو قصة الـ Brand.</p>
+<figure><a class="zoom" href="assets/01-homepage/05-banners.webp"><img src="assets/01-homepage/05-banners.webp" alt="تشريح البانر وترتيباته الشائعة" loading="lazy" decoding="async"></a><figcaption>صورة 5: تشريح البانر، وأربع طرق شائعة لترتيب البانرات.</figcaption></figure>
+<p><strong>القاعدة الذهبية:</strong> متى سمح المكوّن، اجعل النص طبقة منفصلة فوق الصورة أو بجانبها، ولا تكتبه داخل الصورة نفسها. هكذا يقرأه محرك البحث، ويتغير مع اللغة، ولا يصبح غير مقروء على الموبايل. وإذا كان المكوّن الجاهز يقبل صورة فقط، صمّم نسختين من البانر: واحدة للديسكتوب وأخرى للموبايل بنص أكبر.</p>
+<h2 id="قسم-المنتجات-والفلترة">قسم المنتجات والفلترة</h2>
+<p>قسم المنتجات ينقل العميل من مرحلة الاكتشاف إلى مرحلة الاختيار، لذلك هو من أهم أقسام الصفحة على الإطلاق.</p>
+<p>يتكون عادةً من:</p>
+<ul>
+<li><strong>Section Title + Description:</strong> ما هذه المجموعة؟ ولماذا تهمني؟</li>
+<li><strong>Tabs أو Filters:</strong> مثل الكل، الأكثر مبيعًا، وصل حديثًا، العروض، الرائج.</li>
+<li><strong>Product Grid أو Carousel:</strong> الـ Grid لمقارنة عدة منتجات في نظرة، والـ Carousel لتوفير المساحة.</li>
+<li><strong>View All CTA:</strong> يوصل إلى صفحة كل المنتجات بالفلاتر الكاملة.</li>
+</ul>
+<p>يمكنك تكرار القسم بأكثر من مجموعة في نفس الصفحة: Best Sellers، New Arrivals، Featured، Recommended، Offers، Trending، Recently Viewed.</p>
+<figure><a class="zoom" href="assets/01-homepage/06-product-section.webp"><img src="assets/01-homepage/06-product-section.webp" alt="تشريح قسم المنتجات" loading="lazy" decoding="async"></a><figcaption>صورة 6: قسم منتجات بعنوان وتابات فلترة وشبكة منتجات وزر «عرض الكل».</figcaption></figure>
+<p>قسم المنتجات يمكن تصميمه بألف شكل. لكن تذكّر أن الفلترة الكاملة مكانها صفحة قائمة المنتجات (Product Listing Page)، وهذا موضوع <a href="02-product-listing.html">المقال الثاني</a>. في الصفحة الرئيسية، التابات البسيطة كافية.</p>
+<h2 id="الـ-product-card-أهم-component-في-المتجر">الـ Product Card: أهم Component في المتجر</h2>
+<p>الـ Product Card يتكرر عشرات أو مئات المرات داخل المتجر. أي قرار تصميمي فيه، صغيرًا كان أو كبيرًا، يتضاعف بعدد المنتجات.</p>
+<figure><a class="zoom" href="assets/01-homepage/07-product-card-anatomy.webp"><img src="assets/01-homepage/07-product-card-anatomy.webp" alt="تشريح الـ Product Card" loading="lazy" decoding="async"></a><figcaption>صورة 7: تشريح الـ Product Card وعناصره الأساسية.</figcaption></figure>
+<h3 id="1-صورة-المنتج">1. صورة المنتج</h3>
+<p>أول ما يجذب العين. يجب أن تكون عالية الجودة وواضحة، وبنفس الأبعاد والخلفية في كل المنتجات، ومناسبة لنسبة الكارت. ويمكن إظهار صورة ثانية عند الـ Hover أو إضافة Gallery صغيرة.</p>
+<h3 id="2-معلومات-المنتج">2. معلومات المنتج</h3>
+<ul>
+<li><strong>اسم المنتج:</strong> سطران كحد أقصى في المتجر المخصص، ثم يُختصر بنقاط. لكن لو الثيم سيُنشر في متجر ثيمات سلة، فمتطلبات المراجعة تنص على ظهور اسم المنتج كاملًا دون اختصار في عناصر القوائم (<a href="https://docs.salla.dev/421887m0" target="_blank" rel="noopener">Salla Docs</a>)، فصمّم الكارت ليتحمل الأسماء الطويلة.</li>
+<li><strong>وصف قصير:</strong> عند الحاجة فقط.</li>
+<li><strong>السعر:</strong> السعر بعد الخصم هو الأبرز، والسعر قبل الخصم أصغر ومشطوب، ونسبة الخصم في Badge.</li>
+<li><strong>التقييم والـ Variants:</strong> مثل النجوم أو دوائر الألوان، حسب طبيعة المنتج.</li>
+</ul>
+<h3 id="3-الأكشنز-ليس-كل-ما-يمكن-يجب-أن-يظهر">3. الأكشنز: ليس كل ما يمكن يجب أن يظهر</h3>
+<blockquote>
+<p><strong>الـ UI الجيد لا يعرض كل شيء؛ يعرض ما يحتاجه المستخدم في اللحظة المناسبة.</strong></p>
+</blockquote>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>الأكشن</th>
+<th>الأولوية</th>
+<th>أين يظهر</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Add to Cart</td>
+<td>أساسي</td>
+<td>ظاهر دائمًا</td>
+</tr>
+<tr>
+<td>Wishlist</td>
+<td>ثانوي</td>
+<td>أيقونة صغيرة ظاهرة دائمًا</td>
+</tr>
+<tr>
+<td>Quick View</td>
+<td>ثانوي</td>
+<td>عند الـ Hover على الديسكتوب</td>
+</tr>
+<tr>
+<td>Quantity Control</td>
+<td>حسب المتجر</td>
+<td>مفيد عندما تُشترى كميات، مثل البقالة والمنتجات الورقية والجملة</td>
+</tr>
+<tr>
+<td>Compare</td>
+<td>حسب المتجر</td>
+<td>مفيد للإلكترونيات والأجهزة</td>
+</tr>
+<tr>
+<td>Share / Copy Link</td>
+<td>منخفض</td>
+<td>غالبًا داخل صفحة المنتج</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>تذكّر: الموبايل لا يعرف الـ Hover.</strong> أي أكشن تخفيه حتى يمر الماوس فوق الكارت سيختفي تمامًا على الموبايل. قرر من البداية ما يظهر دائمًا، وما ينتقل إلى صفحة المنتج.</p>
+<h3 id="4-الـ-tags-والحالات">4. الـ Tags والحالات</h3>
+<p>الـ Badges توضح حالة المنتج: Sale، New، Best Seller، Limited، Out of Stock، Low Stock، Coming Soon. ويمكن إضافة Countdown Timer للعروض المحدودة.</p>
+<ul>
+<li>Badge أو اثنان كحد أقصى في الكارت الواحد.</li>
+<li>لون ثابت لكل معنى في كل المتجر؛ الأحمر للخصم مثلًا، والرمادي لغير المتوفر.</li>
+<li>المنتج غير المتوفر: خفّف الصورة، واستبدل «أضف للسلة» بـ «أعلمني عند التوفر».</li>
+</ul>
+<figure><a class="zoom" href="assets/01-homepage/08-card-overloaded-vs-focused.webp"><img src="assets/01-homepage/08-card-overloaded-vs-focused.webp" alt="الكارت المزدحم مقابل الكارت المركّز وحالات المنتج" loading="lazy" decoding="async"></a><figcaption>صورة 8: الكارت المزدحم مقابل الكارت المركّز، وأربع حالات للمنتج.</figcaption></figure>
+<p>الهدف هنا هو <strong>Communication</strong>، وليس إضافة عناصر لمجرد أنها متاحة.</p>
+<h2 id="أقسام-الثقة-لماذا-أشتري-من-هنا">أقسام الثقة: لماذا أشتري من هنا؟</h2>
+<p>بعد أن وجد العميل المنتج، يبقى سؤال واحد: هل أثق في هذا المتجر؟ أربعة أقسام تجيب عن هذا السؤال.</p>
+<h3 id="من-نحن-والمميزات-value-proposition">من نحن والمميزات (Value Proposition)</h3>
+<p>لا تكتب فقرة عن تاريخ البراند. اكتب ما يستفيده العميل: جودة المنتجات، سرعة التوصيل، الضمان، الاسترجاع، خدمة العملاء. الشكل الأشهر هنا: 3 أو 4 مميزات، لكل ميزة أيقونة وعنوان قصير وسطر واحد.</p>
+<h3 id="آراء-العملاء">آراء العملاء</h3>
+<p>من أهم عناصر بناء الثقة، لأنها تقلل الـ Trust Barrier قبل قرار الشراء. يمكن عرض التقييمات، والـ Testimonials، وصور العملاء للمنتج (User Generated Content). الرأي الذي يذكر تفصيلة حقيقية عن المنتج أقوى من عشرة آراء تقول «ممتاز».</p>
+<h3 id="الأسئلة-الشائعة-faq">الأسئلة الشائعة (FAQ)</h3>
+<p>تزيل الـ Friction قبل الشراء: الشحن، والدفع، والاسترجاع والاستبدال، ومدة التوصيل، والمقاسات، والضمان. استخدم Accordion حتى لا يطول القسم، واجعل أهم سؤالين مفتوحين أو في الأعلى.</p>
+<h3 id="المقالات-blog">المقالات (Blog)</h3>
+<p>أضفها عندما يكون المحتوى جزءًا من استراتيجية المتجر: أدلة شراء، وطرق استخدام، ونصائح، وتحسين ظهور المتجر في محركات البحث (SEO). وجود المقالات ليس إلزاميًا.</p>
+<figure><a class="zoom" href="assets/01-homepage/09-trust-sections.webp"><img src="assets/01-homepage/09-trust-sections.webp" alt="أقسام الثقة: المميزات وآراء العملاء والأسئلة الشائعة" loading="lazy" decoding="async"></a><figcaption>صورة 9: ثلاثة أقسام للثقة: المميزات، وآراء العملاء، والأسئلة الشائعة.</figcaption></figure>
+<p><strong>على أرض الواقع:</strong> ثيمات سلة تأتي بمكونات جاهزة لمميزات المتجر وآراء العملاء (<a href="https://docs.salla.dev/422558m0" target="_blank" rel="noopener">Salla Docs</a>)، فابدأ منها وصمّم شكلها بما يناسب الـ Brand قبل أن تطلب مكوّنًا مخصصًا.</p>
+<h2 id="الفوتر-footer">الفوتر (Footer)</h2>
+<p>الفوتر آخر نقطة في الصفحة، لكنه جزء أساسي من الـ Information Architecture. العميل الذي وصل للفوتر غالبًا يبحث عن شيء لم يجده: سياسة الاسترجاع، أو رقم التواصل، أو قسم معين.</p>
+<p>قسّم محتواه إلى مجموعات واضحة:</p>
+<ul>
+<li><strong>عن المتجر:</strong> Logo، ونبذة قصيرة، وروابط السوشيال ميديا.</li>
+<li><strong>روابط التسوق:</strong> الأقسام الرئيسية، والعروض، والجديد.</li>
+<li><strong>المساعدة:</strong> الشحن والتوصيل، والاسترجاع والاستبدال، والأسئلة الشائعة، وتواصل معنا.</li>
+<li><strong>السياسات:</strong> الشروط والأحكام، وسياسة الخصوصية.</li>
+<li><strong>الثقة:</strong> أيقونات وسائل الدفع، وبيانات التوثيق التجاري والرقم الضريبي إن وُجدت.</li>
+<li><strong>Newsletter:</strong> اختياري، وبحقل واحد فقط.</li>
+</ul>
+<figure><a class="zoom" href="assets/01-homepage/10-footer.webp"><img src="assets/01-homepage/10-footer.webp" alt="تشريح الفوتر على الديسكتوب والموبايل" loading="lazy" decoding="async"></a><figcaption>صورة 10: تشريح الفوتر وتقسيمه إلى مجموعات.</figcaption></figure>
+<p><strong>على الموبايل:</strong> حوّل أعمدة الروابط إلى Accordion، حتى لا يصبح الفوتر أطول من الصفحة نفسها.</p>
+<h2 id="لا-يوجد-layout-واحد-صحيح">لا يوجد Layout واحد صحيح</h2>
+<p>كل ما سبق ليس وصفة ثابتة تُتبع حرفيًا. أنت تأخذ الأساس كـ Hint، ثم تبني عليه شيئًا أفضل.</p>
+<ul>
+<li>يمكنك تغيير ترتيب الأقسام بالكامل.</li>
+<li>يمكنك إضافة أقسام جديدة، أو حذف أقسام، أو دمج أكثر من قسم في قسم واحد.</li>
+<li>يمكنك عرض المنتجات بالتابات أو السلايدر أو الـ Grid أو بأسلوب Editorial.</li>
+<li>يمكنك بناء تجربة مختلفة تمامًا، إذا كانت تخدم الـ Brand والعميل.</li>
+</ul>
+<p>متجر يبيع منتجًا واحدًا لا يحتاج قسم أقسام ولا قسم براندات. ومتجر قطع غيار بآلاف المنتجات يحتاج البحث والأقسام قبل أي بانر جميل.</p>
+<p>خذ الـ Structure كـ <strong>Foundation وليس Rulebook</strong>. واترك لخيالك الإبداع، بشرط أن يبقى في حدود ما يمكن تنفيذه على المنصة. وهذا هو موضوع القسم التالي.</p>
+<h2 id="سلة-وزد-صمم-وأنت-فاهم-المنصة">سلة وزد: صمّم وأنت فاهم المنصة</h2>
+<p>الفرق بين مصمم يرسم واجهة جميلة وبين Product Designer، أن الثاني يعرف ماذا سيحدث لتصميمه بعد التسليم. في Shopify مساحة الحرية أكبر، أما سلة وزد فلكل منهما حدود واضحة يجب أن تعرفها قبل أول Frame.</p>
+<blockquote>
+<p><strong>لا تصمم شيئًا بمعزل عن الـ Platform.</strong></p>
+</blockquote>
+<h3 id="كيف-تبنى-الثيمات-اليوم">كيف تُبنى الثيمات اليوم؟</h3>
+<p><strong>سلة:</strong> وثائق سلة الحالية تقدم نظام Twilight المبني على React، وتصنّف محرك Twilight القديم المبني على Twig كـ Deprecated. الفكرة الأساسية أن محرك الثيمات يوفر متجرًا كاملًا يعمل، والثيم يصف فقط ما يختلف عنه (<a href="https://docs.salla.dev/twilight/react/start/what-is-a-theme" target="_blank" rel="noopener">Salla Docs: Twilight React</a>). وفي الثيمات المبنية على المحرك القديم، الصفحة الرئيسية تتكون من مكونات جاهزة، مثل السلايدر والبانر الثابت وآراء العملاء ومميزات المتجر وسلايدر المنتجات والبراندات، بالإضافة إلى مكونات يبنيها المطور خصيصًا، والتحكم في إظهارها وإخفائها من بوابة الشركاء (<a href="https://docs.salla.dev/422558m0" target="_blank" rel="noopener">Salla Docs: Home Page</a>).</p>
+<p><strong>زد:</strong> ثيمات زد أصبحت تُبنى على نظام Vitrin باستخدام قوالب Jinja وSettings Schema، والثيمات المبنية على Twig أصبحت Deprecated وتحتاج إلى ترحيل. ومن الأشياء المهمة للمصمم: إذا لم يصمم الثيم صفحة معينة، تستخدم زد الصفحة الافتراضية من ثيمها الأساسي. وزد توصي بعدم تثبيت الألوان والخطوط والمسافات داخل الكود، بل سحبها من إعدادات الثيم حتى يغيّرها التاجر بنفسه (<a href="https://docs.zid.sa/theme-development.md" target="_blank" rel="noopener">Zid Docs</a>).</p>
+<p><strong>الدرس:</strong> المنصتان غيّرتا محركاتهما مؤخرًا. قبل أن تعد العميل بأي شيء، راجع آخر نسخة من الوثائق، واسأل المطور.</p>
+<h3 id="سلم-القرار-ابدأ-بأصغر-تغيير">سلّم القرار: ابدأ بأصغر تغيير</h3>
+<p>وثائق سلة نفسها تنصح المطور بأن يبدأ بأصغر تغيير ممكن: إعداد، ثم إضافة في مكان محدد، ثم Component، ثم صفحة كاملة (<a href="https://docs.salla.dev/twilight/react/start/what-is-a-theme" target="_blank" rel="noopener">Salla Docs</a>). نفس السلّم يصلح للمصمم، ويجيب عن أربعة أسئلة: ماذا يمكن تصميمه؟ وماذا يمكن ضبطه بالإعدادات؟ وماذا يحتاج تطويرًا؟ وماذا غير ممكن؟</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>المستوى</th>
+<th>مثال</th>
+<th>من ينفذه</th>
+<th>التكلفة</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1. إعداد (Setting)</td>
+<td>الألوان والخطوط، وصور البانرات، وإظهار قسم أو إخفاؤه</td>
+<td>التاجر من لوحة التحكم</td>
+<td>الأقل</td>
+</tr>
+<tr>
+<td>2. إضافة في مكان محدد</td>
+<td>شارة «شحن مجاني» تحت السعر</td>
+<td>المطور</td>
+<td>منخفضة</td>
+</tr>
+<tr>
+<td>3. Component مخصص</td>
+<td>Product Card بتصميم جديد، أو قسم آراء بشكل مختلف</td>
+<td>المطور</td>
+<td>متوسطة</td>
+</tr>
+<tr>
+<td>4. صفحة أو تجربة كاملة</td>
+<td>تجربة تخصيص منتج، أو صفحة تفاعلية خاصة</td>
+<td>مطور بخبرة</td>
+<td>الأعلى، وقد لا تكون ممكنة</td>
+</tr>
+</tbody>
+</table></div>
+<figure><a class="zoom" href="assets/01-homepage/11-platform-ladder.webp"><img src="assets/01-homepage/11-platform-ladder.webp" alt="سلّم قرارات التنفيذ على سلة وزد" loading="lazy" decoding="async"></a><figcaption>صورة 11: سلّم قرارات التنفيذ، من الإعداد البسيط حتى التطوير الكامل.</figcaption></figure>
+<p>كل ما تصممه في المستوى الأول يعني متجرًا أسهل في الصيانة، وتاجرًا يستطيع التعديل بنفسه. وكل ما يصعد في السلّم يحتاج نقاشًا مع المطور قبل التسليم.</p>
+<h3 id="ثيم-لمتجر-واحد-أم-ثيم-للمتجر-العام">ثيم لمتجر واحد، أم ثيم للمتجر العام؟</h3>
+<p>هذان نوعان مختلفان من العمل:</p>
+<ul>
+<li><strong>تصميم متجر لبراند واحد:</strong> حرية أكبر في حكي قصة الـ Brand، لأنك تعرف المنتجات والصور والجمهور.</li>
+<li><strong>تصميم ثيم يُباع في متجر ثيمات سلة:</strong> سيستخدمه تجار مختلفون بمنتجات وصور وأسماء لا تعرفها. هنا المرونة أهم من أي شيء: إعدادات للألوان والخطوط، وأقسام تُظهر وتُخفى، وتصميم يصمد أمام صور ضعيفة وأسماء طويلة. سلة تراجع الثيم قبل نشره، وتشترط أن يكون مختلفًا بوضوح عن ثيمها الأساسي «رائد»، وأن لا يتجاوز حجم الثيم العام 1MB (<a href="https://docs.salla.dev/421886m0" target="_blank" rel="noopener">Salla Docs</a>). ومراجعة الـ UI/UX تشمل الـ Layout والـ Typography والـ Art Direction والاتساق وتجربة العميل (<a href="https://docs.salla.dev/421887m0" target="_blank" rel="noopener">Salla Docs</a>).</li>
+</ul>
+<h3 id="قبل-أول-frame">قبل أول Frame</h3>
+<ul>
+<li>افتح الثيم الافتراضي للمنصة وادرس مكوناته: ثيم «رائد» في سلة، وثيمات العينة التي تشاركها زد على GitHub.</li>
+<li>استخدم الـ Figma Template الذي توفره سلة لثيماتها ضمن وثائقها (<a href="https://docs.salla.dev/421885m0" target="_blank" rel="noopener">Salla Docs</a>).</li>
+<li>ابنِ الألوان والخطوط والمسافات كـ Design Tokens، لأنها ستتحول إلى إعدادات يغيّرها التاجر.</li>
+<li>اتفق مع المطور على حالة كل Component: جاهز كما هو، أم معدّل، أم مخصص بالكامل.</li>
+</ul>
+<h2 id="ما-وراء-الأقسام-الصور-والأيقونات-والخطوط">ما وراء الأقسام: الصور والأيقونات والخطوط</h2>
+<p>القيمة الحقيقية لا تأتي من عدد الأقسام، بل من جودة التفاصيل داخلها.</p>
+<h3 id="الصور">الصور</h3>
+<p>الصورة الجيدة ترفع قيمة المنتج، والصورة الضعيفة تجعل منتجًا ممتازًا يبدو رخيصًا. اهتم بالدقة، والإضاءة، والتكوين، والاتساق بين الصور، ونسبة الأبعاد.</p>
+<p><strong>نصيحة من التجربة:</strong> سلّم التاجر «دليل تصوير» صغيرًا مع التصميم: نسبة الأبعاد المطلوبة، ولون الخلفية، والمسافة حول المنتج. التصميم الجميل يسقط عندما يرفع التاجر صورًا عشوائية بعد الإطلاق.</p>
+<h3 id="الأيقونات">الأيقونات</h3>
+<p>من مجموعة واحدة، وبنفس السُمك والأسلوب، وسهلة الفهم، ومناسبة لشخصية الـ Brand. ولا تضع أيقونة لمجرد أن المساحة تسمح.</p>
+<h3 id="الخطوط-typography">الخطوط (Typography)</h3>
+<p>اختيار الخط ليس قرارًا تجميليًا. يجب أن يناسب شخصية الـ Brand والجمهور، وأن يكون مقروءًا، ويصنع Hierarchy واضحة.</p>
+<p>في المتاجر العربية تحديدًا:</p>
+<ul>
+<li>اختر خطًا عربيًا يعمل جيدًا مع الخط اللاتيني إذا كان المتجر ثنائي اللغة، أو عائلة خطوط تدعم اللغتين.</li>
+<li>اختبر الأرقام والأسعار، فهي أكثر نص يتكرر في المتجر.</li>
+<li>اختبر الاتجاهين RTL وLTR، لأن الأيقونات والأسهم والسلايدرات تنعكس.</li>
+</ul>
+<h2 id="كل-براند-له-قصة">كل براند له قصة</h2>
+<p>هذه أهم نقطة في المقال كله: <strong>كل Brand له شخصية وطابع وحكاية.</strong> لذلك لا يجب أن تبدو كل المتاجر التي تصممها كأنها متجر واحد بعد تغيير الـ Logo والألوان.</p>
+<p>الـ Brand يظهر في كل شيء: الـ UX Writing، ونبرة الصوت واللهجة، والخطوط، والصور والفيديوهات، والألوان، والأيقونات، والـ Layout، والمسافات، والـ Components، والحركة، والمحتوى.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>نوع البراند</th>
+<th>كيف يظهر في التصميم</th>
+<th>مثال على الـ CTA</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>فاخر (عطور، عود)</td>
+<td>مساحات واسعة، ألوان هادئة، خط أنيق، صور قريبة بإضاءة درامية، كلام قليل</td>
+<td>اكتشف المجموعة</td>
+</tr>
+<tr>
+<td>تقليدي (تمور، قهوة)</td>
+<td>ألوان ترابية، لمسات مستوحاة من التراث، لغة دافئة قريبة</td>
+<td>اطلب قهوتك</td>
+</tr>
+<tr>
+<td>مرح (مستلزمات الحيوانات الأليفة)</td>
+<td>ألوان مبهجة، زوايا دائرية، رسومات خفيفة، لغة ودودة</td>
+<td>دلّع قطتك</td>
+</tr>
+<tr>
+<td>تقني (إلكترونيات، قطع كمبيوتر)</td>
+<td>Grid منظم، مواصفات واضحة، فلاتر قوية، لغة مباشرة</td>
+<td>قارن المواصفات</td>
+</tr>
+<tr>
+<td>شبابي (أزياء عصرية)</td>
+<td>جرأة في الـ Layout، صور بأسلوب Editorial، حركة أكثر</td>
+<td>شوف الجديد</td>
+</tr>
+</tbody>
+</table></div>
+<p>لو الـ Brand فاخر، يجب أن تشعر بذلك. ولو مرح، يجب أن تشعر بذلك. الـ UI ليس عناصر مرصوصة بجانب بعضها؛ هو وسيلة تحكي بها قصة الـ Brand، وتلامس بها قلب المنتج، وتبني علاقة بين العميل والبراند.</p>
+<h2 id="الخلاصة-التجربة-أكبر-من-الواجهة">الخلاصة: التجربة أكبر من الواجهة</h2>
+<p>تصميم متجر إلكتروني ليس <strong>Sections + Cards + Buttons + Colors</strong>. هو مزيج من ستة أسئلة، تجيب عنها كلها معًا:</p>
+<ul>
+<li><strong>UX:</strong> كيف يصل العميل إلى ما يريد؟</li>
+<li><strong>UI:</strong> كيف نجعل التجربة واضحة وسهلة وجميلة؟</li>
+<li><strong>Brand:</strong> كيف تعبّر التجربة عن شخصية المتجر؟</li>
+<li><strong>Content:</strong> ماذا نقول للعميل؟ وكيف نقوله؟</li>
+<li><strong>Technology:</strong> ماذا نستطيع أن ننفذ فعليًا على سلة أو زد؟</li>
+<li><strong>Business:</strong> ما الهدف الذي يريد التاجر تحقيقه؟</li>
+</ul>
+<figure><a class="zoom" href="assets/01-homepage/12-experience.webp"><img src="assets/01-homepage/12-experience.webp" alt="العناصر الستة التي تصنع تجربة المتجر" loading="lazy" decoding="async"></a><figcaption>صورة 12: العناصر الستة التي تصنع تجربة المتجر.</figcaption></figure>
+<p>عندما تجمع هذه العناصر، تتوقف عن تصميم Storefront جميل، وتبدأ في بناء <strong>E-commerce Experience حقيقية</strong>.</p>
+<h2 id="قائمة-مراجعة-قبل-تسليم-الصفحة-الرئيسية">قائمة مراجعة قبل تسليم الصفحة الرئيسية</h2>
+<p>استخدمها مع كل مشروع قبل أن ترسل التصميم للعميل أو للمطور:</p>
+<ul class="checklist">
+<li class="task"><label><input type="checkbox"><span>الـ Hero يجيب في نظرة واحدة: ماذا يبيع المتجر، وما الخطوة التالية.</span></label></li>
+<li class="task"><label><input type="checkbox"><span>الـ Search والـ Cart ظاهران دائمًا على الديسكتوب والموبايل.</span></label></li>
+<li class="task"><label><input type="checkbox"><span>الأشرطة فوق الـ Hero لا تدفع المحتوى الرئيسي خارج الشاشة على الموبايل.</span></label></li>
+<li class="task"><label><input type="checkbox"><span>قسم الأقسام مُختبر مع 3 أقسام ومع 30 قسمًا، ومع الأسماء الطويلة.</span></label></li>
+<li class="task"><label><input type="checkbox"><span>الـ Product Card مُختبر مع اسم طويل، ومنتج بخصم، ومنتج غير متوفر.</span></label></li>
+<li class="task"><label><input type="checkbox"><span>لا يوجد أكشن مهم مخفي خلف الـ Hover فقط.</span></label></li>
+<li class="task"><label><input type="checkbox"><span>كل Badge له لون ثابت ومعنى واحد في كل المتجر.</span></label></li>
+<li class="task"><label><input type="checkbox"><span>نصوص البانرات مقروءة على الموبايل.</span></label></li>
+<li class="task"><label><input type="checkbox"><span>الخط العربي واللاتيني متناسقان، والأرقام والأسعار واضحة.</span></label></li>
+<li class="task"><label><input type="checkbox"><span>كل قسم مصنّف: إعداد جاهز، أم تعديل، أم Component مخصص، ومتفق عليه مع المطور.</span></label></li>
+<li class="task"><label><input type="checkbox"><span>دليل تصوير مختصر جاهز لتسليمه للتاجر.</span></label></li>
+<li class="task"><label><input type="checkbox"><span>الـ Brand واضح في الكلام والصور والتفاصيل، وليس في الـ Logo والألوان فقط.</span></label></li>
+</ul>
+<h2 id="المصادر">المصادر</h2>
+<ul>
+<li><a href="https://docs.salla.dev/twilight/react/start/what-is-a-theme" target="_blank" rel="noopener">Salla Docs: Twilight (React) Overview</a></li>
+<li><a href="https://docs.salla.dev/422558m0" target="_blank" rel="noopener">Salla Docs: Home Page</a></li>
+<li><a href="https://docs.salla.dev/421886m0" target="_blank" rel="noopener">Salla Docs: Main Requirements</a></li>
+<li><a href="https://docs.salla.dev/421887m0" target="_blank" rel="noopener">Salla Docs: UI / UX Review</a></li>
+<li><a href="https://docs.salla.dev/421885m0" target="_blank" rel="noopener">Salla Docs: Requirements &amp; Review Overview</a></li>
+<li><a href="https://docs.zid.sa/theme-development.md" target="_blank" rel="noopener">Zid Docs: Theme Development</a></li>
+</ul>
+    <nav class="pager" aria-label="التنقل بين المقالات"><span></span><a class="pg next" href="02-product-listing.html"><span class="pg-dir">المقال التالي <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></span><span class="pg-title">02 — صفحة قائمة المنتجات والفلترة</span></a></nav>
+  </article>
+</main>
+<footer class="site-foot"><div class="wrap foot-in">
+  <div><div class="foot-name">أسامة عبد الناصر</div><div class="foot-role">مصمم منتجات رقمية UX/UI</div></div>
+  <nav class="foot-links"><a href="https://osama-abdelnaser.com" target="_blank" rel="noopener">الموقع الشخصي</a><a href="https://www.behance.net/osamaabdelnaser1" target="_blank" rel="noopener">Behance</a><a href="https://www.linkedin.com/in/osama-abdelnaser" target="_blank" rel="noopener">LinkedIn</a><a href="https://github.com/OSA98/salla-zid-ecommerce-design" target="_blank" rel="noopener">GitHub</a></nav>
+  <div class="foot-copy">© أسامة عبد الناصر. المحتوى متاح للتعلم والمشاركة مع ذكر المصدر.</div>
+</div></footer>
+<div class="lightbox" hidden><button class="lb-close" aria-label="إغلاق">×</button><img alt=""></div>
+<script src="assets/site.js"></script>
+</body>
+</html>

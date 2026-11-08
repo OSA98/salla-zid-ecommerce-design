@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>السلة وإتمام الطلب · تصميم المتاجر على سلة وزد</title>
+<meta name="description" content="السلة الجانبية، صفحة السلة، السلة الفارغة، صفحة تأكيد الطلب، وما يتحكم فيه الثيم">
+<meta name="author" content="أسامة عبد الناصر">
+<link rel="canonical" href="https://osa98.github.io/salla-zid-ecommerce-design/04-cart-checkout.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="السلة وإتمام الطلب · تصميم المتاجر على سلة وزد">
+<meta property="og:description" content="السلة الجانبية، صفحة السلة، السلة الفارغة، صفحة تأكيد الطلب، وما يتحكم فيه الثيم">
+<meta property="og:url" content="https://osa98.github.io/salla-zid-ecommerce-design/04-cart-checkout.html">
+<meta property="og:image" content="https://osa98.github.io/salla-zid-ecommerce-design/assets/og.png">
+<meta property="og:locale" content="ar_AR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#12201C">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div class="progress" aria-hidden="true"><span></span></div>
+<header class="topbar"><div class="wrap topbar-in">
+  <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"></span><span>تصميم المتاجر على سلة وزد</span></a>
+  <button class="menu-btn" aria-label="القائمة" aria-expanded="false"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+  <nav class="nav" aria-label="المقالات"><a href="01-homepage.html" class=""><b>01</b>الصفحة الرئيسية</a><a href="02-product-listing.html" class=""><b>02</b>قائمة المنتجات</a><a href="03-product-page.html" class=""><b>03</b>صفحة المنتج</a><a href="04-cart-checkout.html" class="on"><b>04</b>السلة والطلب</a><a href="05-design-system-handoff.html" class=""><b>05</b>Design System</a><a href="notes.html" class="">ملاحظات مهمة</a><a class="gh" href="https://github.com/OSA98/salla-zid-ecommerce-design" target="_blank" rel="noopener" aria-label="الريبو على GitHub"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-4 1.5-4-2-6-2.5M15 21v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.3 4.3 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12 12 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.3 4.3 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg><span>GitHub</span></a></nav>
+</div></header>
+
+<main class="wrap article-layout">
+  <aside class="toc" aria-label="محتوى المقال"><div class="toc-title">في هذا المقال</div><ol><li><a href="#آخر-صفحة-تتحكم-فيها-بالكامل">آخر صفحة تتحكم فيها بالكامل</a></li><li><a href="#سلة-جانبية-أم-صفحة-سلة">سلة جانبية أم صفحة سلة؟</a></li><li><a href="#تشريح-صفحة-السلة">تشريح صفحة السلة</a></li><li><a href="#السلة-الفارغة">السلة الفارغة</a></li><li><a href="#صفحة-تأكيد-الطلب-آخر-انطباع">صفحة تأكيد الطلب: آخر انطباع</a></li><li><a href="#الموبايل-الإجمالي-والزر-دائما-ظاهران">الموبايل: الإجمالي والزر دائمًا ظاهران</a></li><li><a href="#قائمة-مراجعة-قبل-تسليم-السلة">قائمة مراجعة قبل تسليم السلة</a></li><li><a href="#المصادر">المصادر</a></li></ol>
+    <div class="toc-extra"><a href="https://github.com/OSA98/salla-zid-ecommerce-design/tree/main/articles/04-cart-checkout" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-4 1.5-4-2-6-2.5M15 21v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.3 4.3 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12 12 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.3 4.3 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg> المقال على GitHub</a><a href="https://github.com/OSA98/salla-zid-ecommerce-design/raw/main/notion/04-cart-checkout.zip"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg> نسخة Notion</a></div></aside>
+  <article class="prose">
+    <nav class="crumbs"><a href="index.html">السلسلة</a><span>/</span><span>المقال 04 من 5</span></nav>
+    <header class="article-head"><span class="kicker">المقال 04</span><h1>السلة وإتمام الطلب</h1>
+      <p class="meta"><span>بقلم أسامة عبد الناصر</span><span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> قراءة 4 دقائق</span><span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 17l-5-5-9 8"/></svg> 5 صور توضيحية</span></p></header>
+    <details class="toc-mobile"><summary>في هذا المقال</summary><ol><li><a href="#آخر-صفحة-تتحكم-فيها-بالكامل">آخر صفحة تتحكم فيها بالكامل</a></li><li><a href="#سلة-جانبية-أم-صفحة-سلة">سلة جانبية أم صفحة سلة؟</a></li><li><a href="#تشريح-صفحة-السلة">تشريح صفحة السلة</a></li><li><a href="#السلة-الفارغة">السلة الفارغة</a></li><li><a href="#صفحة-تأكيد-الطلب-آخر-انطباع">صفحة تأكيد الطلب: آخر انطباع</a></li><li><a href="#الموبايل-الإجمالي-والزر-دائما-ظاهران">الموبايل: الإجمالي والزر دائمًا ظاهران</a></li><li><a href="#قائمة-مراجعة-قبل-تسليم-السلة">قائمة مراجعة قبل تسليم السلة</a></li><li><a href="#المصادر">المصادر</a></li></ol></details>
+    <blockquote>
+<p><strong>ملاحظة مهمة قبل التصميم:</strong> قوائم صفحات الثيم في وثائق سلة (Twilight React) وزد (Vitrin) تتضمن صفحة السلة وصفحة تأكيد الطلب، لكنها لا تتضمن صفحة إتمام الطلب (Checkout) نفسها (<a href="https://docs.salla.dev/twilight/react/routes" target="_blank" rel="noopener">Salla Docs: Routes</a> · <a href="https://docs.zid.sa/overview-1379323m0" target="_blank" rel="noopener">Zid Docs: Templates</a>). لذلك مساحة تحكمك الأكبر كمصمم هي السلة وصفحة الشكر. لا تفترض أن خطوات الدفع قابلة لإعادة التصميم قبل أن تتأكد مع المطور. التفاصيل في ملف <a href="notes.html">ملاحظات وتحديثات مهمة</a>.</p>
+</blockquote>
+<hr />
+<h2 id="آخر-صفحة-تتحكم-فيها-بالكامل">آخر صفحة تتحكم فيها بالكامل</h2>
+<p>العميل قرر أن يشتري. مهمة السلة الآن بسيطة وحساسة في نفس الوقت: <strong>لا تعطيه سببًا للتراجع.</strong> أي مفاجأة في السعر، أو زر غير واضح، أو خطوة زائدة، قد تكون سببًا لترك السلة.</p>
+<p>وفي سلة وزد تحديدًا، السلة غالبًا آخر صفحة يتحكم الثيم في تصميمها قبل الدفع. لذلك كل ما يطمئن العميل يجب أن يكون هنا: الإجمالي الواضح، وتكلفة الشحن، وطرق الدفع، والخصم.</p>
+<h2 id="سلة-جانبية-أم-صفحة-سلة">سلة جانبية أم صفحة سلة؟</h2>
+<p>بعد الضغط على «أضف للسلة»، أمامك ثلاثة خيارات لما يحدث:</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>الطريقة</th>
+<th>ماذا يحدث</th>
+<th>متى تناسب</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>رسالة تأكيد صغيرة (Toast)</td>
+<td>رسالة «أُضيف للسلة» ويبقى العميل في مكانه</td>
+<td>عندما يشتري العميل عادة أكثر من منتج</td>
+</tr>
+<tr>
+<td>سلة جانبية (Cart Drawer)</td>
+<td>تُفتح من الجانب بالمنتجات والإجمالي</td>
+<td>الأكثر توازنًا لأغلب المتاجر</td>
+</tr>
+<tr>
+<td>الانتقال لصفحة السلة</td>
+<td>ينتقل العميل مباشرة</td>
+<td>متجر المنتج الواحد، أو الشراء السريع</td>
+</tr>
+</tbody>
+</table></div>
+<figure><a class="zoom" href="assets/04-cart-checkout/01-add-to-cart-feedback.webp"><img src="assets/04-cart-checkout/01-add-to-cart-feedback.webp" alt="ثلاث طرق لتأكيد الإضافة للسلة" loading="lazy" decoding="async"></a><figcaption>صورة 1: ثلاث طرق لتأكيد الإضافة للسلة: رسالة صغيرة، وسلة جانبية، وصفحة السلة.</figcaption></figure>
+<p><strong>السلة الجانبية الجيدة</strong> تعرض المنتج المضاف، وتسمح بتعديل الكمية، وتعرض الإجمالي، وفيها زران فقط: «إتمام الطلب» و«عرض السلة».</p>
+<h2 id="تشريح-صفحة-السلة">تشريح صفحة السلة</h2>
+<p>متطلبات مراجعة ثيمات سلة لصفحة السلة واضحة: اسم المنتج، وسعر القطعة، والصورة، والسعر الإجمالي للسطر، والكمية قابلة للتعديل، والإجمالي ظاهرًا، ومؤشر شمول الضريبة، وزر إتمام الطلب، وتحديث الأسعار عند تغيير الكمية. ومن المميزات المطلوبة: ملاحظات الطلب، وأكواد الخصم، وأزرار الدفع المباشر (<a href="https://docs.salla.dev/421887m0" target="_blank" rel="noopener">Salla Docs</a>).</p>
+<figure><a class="zoom" href="assets/04-cart-checkout/02-cart-anatomy.webp"><img src="assets/04-cart-checkout/02-cart-anatomy.webp" alt="تشريح صفحة السلة" loading="lazy" decoding="async"></a><figcaption>صورة 2: تشريح صفحة السلة على الديسكتوب.</figcaption></figure>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>#</th>
+<th>العنصر</th>
+<th>ملاحظة تصميمية</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>شريط الشحن المجاني</td>
+<td>«باقي 62 ر.س على الشحن المجاني» يرفع قيمة الطلب بلطف</td>
+</tr>
+<tr>
+<td>2</td>
+<td>سطر المنتج</td>
+<td>الصورة، والاسم، والخيار المختار، وسعر القطعة</td>
+</tr>
+<tr>
+<td>3</td>
+<td>الكمية والحذف</td>
+<td>أزرار + و−، وحذف واضح مع إمكانية التراجع</td>
+</tr>
+<tr>
+<td>4</td>
+<td>إجمالي السطر</td>
+<td>يتحدث فورًا مع تغيير الكمية</td>
+</tr>
+<tr>
+<td>5</td>
+<td>ملاحظات الطلب</td>
+<td>حقل اختياري، مغلق افتراضيًا</td>
+</tr>
+<tr>
+<td>6</td>
+<td>ملخص الطلب</td>
+<td>المجموع، والخصم، والشحن، والإجمالي شامل الضريبة</td>
+</tr>
+<tr>
+<td>7</td>
+<td>كود الخصم</td>
+<td>حقل وزر «تطبيق»، مع رسالة نجاح أو خطأ واضحة</td>
+</tr>
+<tr>
+<td>8</td>
+<td>إتمام الطلب</td>
+<td>أوضح زر في الصفحة، وتحته أزرار الدفع المباشر</td>
+</tr>
+<tr>
+<td>9</td>
+<td>طرق الدفع والثقة</td>
+<td>أيقونات الدفع، والدفع الآمن، والاسترجاع</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="قواعد-تمنع-التراجع">قواعد تمنع التراجع</h3>
+<ul>
+<li><strong>لا مفاجآت في السعر:</strong> إذا كان الشحن يُحسب لاحقًا، اكتب ذلك صراحة: «يُحسب الشحن في الخطوة التالية».</li>
+<li><strong>الإجمالي هو أكبر رقم</strong> في الملخص، ومعه «شامل الضريبة» إذا كانت الأسعار شاملة.</li>
+<li><strong>كود الخصم لا يسرق الانتباه:</strong> حقل صغير أو رابط «لديك كود خصم؟» يفتحه. حقل كبير وفارغ يجعل العميل يغادر ليبحث عن كود.</li>
+<li><strong>الحذف قابل للتراجع:</strong> رسالة «تم حذف المنتج · تراجع» أفضل من نافذة تأكيد.</li>
+<li><strong>زر واحد أساسي:</strong> «إتمام الطلب» فقط. «متابعة التسوق» رابط ثانوي.</li>
+</ul>
+<h2 id="السلة-الفارغة">السلة الفارغة</h2>
+<p>السلة الفارغة ليست نهاية الرحلة. هي فرصة لإعادة العميل للتسوق:</p>
+<ul>
+<li>رسالة ودودة بنبرة البراند، مثل «سلتك فاضية، وقهوتك تنتظرك».</li>
+<li>زر واضح للعودة للتسوق، أو لأهم قسم في المتجر.</li>
+<li>منتجات مقترحة: الأكثر مبيعًا، أو ما شاهده العميل مؤخرًا.</li>
+<li>إذا كان العميل غير مسجل، رابط لتسجيل الدخول؛ ربما سلته محفوظة في حسابه.</li>
+</ul>
+<figure><a class="zoom" href="assets/04-cart-checkout/03-empty-cart.webp"><img src="assets/04-cart-checkout/03-empty-cart.webp" alt="السلة الفارغة" loading="lazy" decoding="async"></a><figcaption>صورة 3: سلة فارغة تعيد العميل للتسوق بدل أن تتركه أمام صفحة بيضاء.</figcaption></figure>
+<h2 id="صفحة-تأكيد-الطلب-آخر-انطباع">صفحة تأكيد الطلب: آخر انطباع</h2>
+<p>صفحة الشكر من صفحات الثيم في سلة (<a href="https://docs.salla.dev/twilight/react/routes" target="_blank" rel="noopener">Salla Docs: Routes</a>)، وهي آخر ما يراه العميل بعد الدفع. أغلب المتاجر تهملها، وهي من أكثر اللحظات التي يكون فيها العميل سعيدًا ومنتبهًا.</p>
+<ul>
+<li><strong>تأكيد واضح:</strong> «تم استلام طلبك» مع رقم الطلب.</li>
+<li><strong>ماذا بعد؟</strong> موعد التوصيل المتوقع، وأين سيصل إشعار الشحن.</li>
+<li><strong>ملخص الطلب:</strong> المنتجات والإجمالي وعنوان التوصيل.</li>
+<li><strong>خطوة تالية مفيدة:</strong> تتبّع الطلب، أو إنشاء حساب لتتبّع الطلبات، أو منتجات تكمل ما اشتراه.</li>
+<li><strong>نبرة البراند:</strong> هذه أفضل لحظة لرسالة شكر حقيقية بأسلوب المتجر.</li>
+</ul>
+<figure><a class="zoom" href="assets/04-cart-checkout/04-thank-you.webp"><img src="assets/04-cart-checkout/04-thank-you.webp" alt="صفحة تأكيد الطلب" loading="lazy" decoding="async"></a><figcaption>صورة 4: صفحة تأكيد الطلب: تأكيد، وماذا بعد، وملخص، وخطوة تالية.</figcaption></figure>
+<h2 id="الموبايل-الإجمالي-والزر-دائما-ظاهران">الموبايل: الإجمالي والزر دائمًا ظاهران</h2>
+<p>على الموبايل، ملخص الطلب ينتقل أسفل المنتجات. لكن العميل يجب أن يرى الإجمالي وزر إتمام الطلب في كل لحظة، فاجعلهما في <strong>شريط ثابت</strong> أسفل الشاشة.</p>
+<figure><a class="zoom" href="assets/04-cart-checkout/05-mobile-cart.webp"><img src="assets/04-cart-checkout/05-mobile-cart.webp" alt="السلة على الموبايل" loading="lazy" decoding="async"></a><figcaption>صورة 5: السلة الجانبية وصفحة السلة على الموبايل، مع شريط الإجمالي الثابت.</figcaption></figure>
+<h2 id="قائمة-مراجعة-قبل-تسليم-السلة">قائمة مراجعة قبل تسليم السلة</h2>
+<ul class="checklist">
+<li class="task"><label><input type="checkbox"><span>طريقة تأكيد الإضافة للسلة محددة: رسالة، أو سلة جانبية، أو صفحة.</span></label></li>
+<li class="task"><label><input type="checkbox"><span>كل سطر منتج فيه: الصورة، والاسم، والخيار المختار، وسعر القطعة، والكمية، وإجمالي السطر.</span></label></li>
+<li class="task"><label><input type="checkbox"><span>الأسعار والإجمالي يتحدثان فورًا مع تغيير الكمية.</span></label></li>
+<li class="task"><label><input type="checkbox"><span>الإجمالي شامل الضريبة مكتوب بوضوح، والشحن ليس مفاجأة.</span></label></li>
+<li class="task"><label><input type="checkbox"><span>كود الخصم له حالة نجاح وحالة خطأ.</span></label></li>
+<li class="task"><label><input type="checkbox"><span>ملاحظات الطلب وأزرار الدفع المباشر موجودة.</span></label></li>
+<li class="task"><label><input type="checkbox"><span>زر «إتمام الطلب» هو الأوضح، و«متابعة التسوق» رابط ثانوي.</span></label></li>
+<li class="task"><label><input type="checkbox"><span>الحذف قابل للتراجع.</span></label></li>
+<li class="task"><label><input type="checkbox"><span>السلة الفارغة مصممة بخطوة تالية ومنتجات مقترحة.</span></label></li>
+<li class="task"><label><input type="checkbox"><span>صفحة تأكيد الطلب مصممة.</span></label></li>
+<li class="task"><label><input type="checkbox"><span>شريط الإجمالي والزر ثابت على الموبايل.</span></label></li>
+<li class="task"><label><input type="checkbox"><span>تم التأكد مع المطور مما يتحكم فيه الثيم في خطوات الدفع.</span></label></li>
+</ul>
+<h2 id="المصادر">المصادر</h2>
+<ul>
+<li><a href="https://docs.salla.dev/421887m0" target="_blank" rel="noopener">Salla Docs: UI / UX Review</a></li>
+<li><a href="https://docs.salla.dev/twilight/react/routes" target="_blank" rel="noopener">Salla Docs: Twilight React Routes</a></li>
+<li><a href="https://docs.zid.sa/overview-1379323m0" target="_blank" rel="noopener">Zid Docs: Templates Overview</a></li>
+</ul>
+    <nav class="pager" aria-label="التنقل بين المقالات"><a class="pg prev" href="03-product-page.html"><span class="pg-dir"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg> المقال السابق</span><span class="pg-title">03 — صفحة المنتج</span></a><a class="pg next" href="05-design-system-handoff.html"><span class="pg-dir">المقال التالي <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></span><span class="pg-title">05 — Design System والتسليم للمطور</span></a></nav>
+  </article>
+</main>
+<footer class="site-foot"><div class="wrap foot-in">
+  <div><div class="foot-name">أسامة عبد الناصر</div><div class="foot-role">مصمم منتجات رقمية UX/UI</div></div>
+  <nav class="foot-links"><a href="https://osama-abdelnaser.com" target="_blank" rel="noopener">الموقع الشخصي</a><a href="https://www.behance.net/osamaabdelnaser1" target="_blank" rel="noopener">Behance</a><a href="https://www.linkedin.com/in/osama-abdelnaser" target="_blank" rel="noopener">LinkedIn</a><a href="https://github.com/OSA98/salla-zid-ecommerce-design" target="_blank" rel="noopener">GitHub</a></nav>
+  <div class="foot-copy">© أسامة عبد الناصر. المحتوى متاح للتعلم والمشاركة مع ذكر المصدر.</div>
+</div></footer>
+<div class="lightbox" hidden><button class="lb-close" aria-label="إغلاق">×</button><img alt=""></div>
+<script src="assets/site.js"></script>
+</body>
+</html>
