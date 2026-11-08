@@ -16,7 +16,7 @@
 | 02 | [صفحة قائمة المنتجات والفلترة](articles/02-product-listing/README.md) | رأس القسم، الفلاتر، الترتيب، الشبكة، التنقل بين النتائج، والحالات الفارغة | [Notion](notion/02-product-listing.zip) |
 | 03 | [صفحة المنتج](articles/03-product-page/README.md) | المعرض، السعر، الخيارات وحالاتها، زر الإضافة، الثقة، والموبايل | [Notion](notion/03-product-page.zip) |
 | 04 | [السلة وإتمام الطلب](articles/04-cart-checkout/README.md) | السلة الجانبية، صفحة السلة، السلة الفارغة، صفحة تأكيد الطلب، وما يتحكم فيه الثيم | [Notion](notion/04-cart-checkout.zip) |
-| 05 | Design System والتسليم للمطور | Tokens، المكونات وحالاتها، إعدادات التاجر، ملف Figma، والتسليم | قيد الكتابة |
+| 05 | [Design System والتسليم للمطور](articles/05-design-system-handoff/README.md) | Tokens، المكونات وحالاتها، إعدادات التاجر، ملف Figma، والتسليم | [Notion](notion/05-design-system-handoff.zip) |
 | 06 | دراسة حالة: متجر حقيقي من الفكرة حتى الإطلاق | من إعداد أسامة، بالصور والشرح | قريبًا |
 
 ## قبل أن تبدأ: ملاحظات مهمة
